@@ -1,4 +1,4 @@
-require_relative "../code/alarm"
+require_relative "../../code/tire_pressure_monitoring_system/alarm"
 
 describe Alarm do
   context "#alarm_status" do
