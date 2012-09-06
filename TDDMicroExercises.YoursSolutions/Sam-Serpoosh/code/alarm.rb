@@ -15,7 +15,7 @@ class Alarm
   def check 
     psi_pressure = @sensor.pop_next_pressure_psi_value
 
-    if dangerous_pressure(psi_pressure)
+    if dangerous_pressure?(psi_pressure)
       turn_on_alarm
       @alarm_count += 1
     end
@@ -26,7 +26,7 @@ class Alarm
   end
 
   private
-  def dangerous_pressure(pressure)
+  def dangerous_pressure?(pressure)
     pressure < LOWPRESSURETHRESHOLD || 
       pressure > HIGHPRESSURETHRESHOLD
   end
