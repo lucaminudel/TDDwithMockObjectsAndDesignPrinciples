@@ -28,5 +28,3 @@ class TelemetryDiagnosticControls
     @diagnostic_info = @telemetry_client.receive
   end
 end
-
-TelemetryDiagnosticControls.new.check_transmission

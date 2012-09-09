@@ -48,8 +48,8 @@ class TelemetryClient
     else
       #simulate a received message
       message = "" 
-      messageLength = 50 + rand(110)
-      i = messageLength
+      message_length = 50 + rand(110)
+      i = message_length 
       while i >= 0
         message += (40 + rand(126)).chr
         i -= 1
