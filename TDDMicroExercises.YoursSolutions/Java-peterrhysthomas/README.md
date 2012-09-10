@@ -1,0 +1,3 @@
+## Solution from [@peterrhysthomas](https://twitter.com/peterrhysthomas) 
+
+Note - this solution uses the [characterization testing](http://en.wikipedia.org/wiki/Characterization_test) approach for placing the code under test before implementing any refactoring of the solution.  These tests act as a regression to ensure that the existing behaviour is maintained through the subsequent refactoring and unit testing cycle.  Characterization tests are based on the existing inputs and outputs of the code and it makes no attempt to check the validity of these, it assumes that the existing behaviour is the desired behaviour.
