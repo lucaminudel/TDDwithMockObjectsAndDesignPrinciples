@@ -4,11 +4,14 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-
-public class TurnTicketDispenserCoveringsTests {
+/**
+ * Characterization test class for testing existing behaviour of 
+ * {@link TicketDispenser} before refactoring.
+ *
+ */
+public class TurnTicketDispenserCharacterizationTests {
 	
 	@Test
-	// Regression test to ensure existing API is not broken
 	public void returnsAnIncrementingSequenceOfTicketsUsingDefaultSequenceImplementation() {
 		TicketDispenser dispenser = new TicketDispenser();
 		assertEquals(0,dispenser.getTurnTicket().getTurnNumber());

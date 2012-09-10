@@ -3,10 +3,13 @@ package tddmicroexercises.telemetrysystem;
 import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
-
-public class TelemetryDiagnosticControlsCoveringsTests{
+/**
+ * Characterization test class for testing existing behaviour of 
+ * {@link TelemetryDiagnosticControls} before refactoring.
+ *
+ */
+public class TelemetryDiagnosticControlsCharacterizationTests{
 	@Test
-	// Regression test to ensure existing API is not broken
 	public void checkTransmissionShouldSetDiagnosticInfo() throws Exception{
 		TelemetryDiagnosticControls controls = new TelemetryDiagnosticControls();
 		

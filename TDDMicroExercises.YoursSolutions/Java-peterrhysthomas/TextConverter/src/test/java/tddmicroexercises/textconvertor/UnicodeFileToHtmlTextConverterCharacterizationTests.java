@@ -6,10 +6,14 @@ import java.io.IOException;
 
 import org.junit.Test;
 
-public class UnicodeFileToHtmlTextConverterCoveringsTests {
+/**
+ * Characterization test class for testing existing behaviour of 
+ * {@link UnicodeFileToHtmlTextConverter} before refactoring.
+ *
+ */
+public class UnicodeFileToHtmlTextConverterCharacterizationTests {
 
 	@Test
-	// Regression test to ensure existing API is not broken
 	public void shouldConvertFileContentsToHtmlEscapedString() throws IOException {
 		String fullFilenameWithPath = this.getClass().getClassLoader().getResource("data.txt").getPath();
 		UnicodeFileToHtmlTextConverter converter = new UnicodeFileToHtmlTextConverter(fullFilenameWithPath);
