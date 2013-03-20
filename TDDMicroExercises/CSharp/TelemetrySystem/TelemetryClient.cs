@@ -14,8 +14,8 @@ namespace TDDMicroExercises.TelemetrySystem
 		private bool _onlineStatus;
 		private bool _diagnosticMessageJustSent = false;
 
-        private readonly Random _connectionEventsSimulator = new Random(42);
-        private readonly Random _randomMessageSimulator = new Random(42);
+        private readonly Random _connectionEventsSimulator = new Random();
+        private readonly Random _randomMessageSimulator = new Random();
 
 		public bool OnlineStatus
 		{
@@ -29,8 +29,8 @@ namespace TDDMicroExercises.TelemetrySystem
 				throw new ArgumentNullException();
 			}
 
-			// Fake the connection with 80% chances of success
-			bool success = _connectionEventsSimulator.Next(1, 10) <= 8;
+			// Fake the connection with 20% chances of success
+			bool success = _connectionEventsSimulator.Next(1, 10) <= 2;
 
 			_onlineStatus = success;
 
