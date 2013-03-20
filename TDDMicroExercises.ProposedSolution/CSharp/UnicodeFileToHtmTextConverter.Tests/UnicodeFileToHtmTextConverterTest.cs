@@ -38,7 +38,7 @@ namespace TDDMicroExercises.OneSolution.UnicodeFileToHtmTextConverter.Tests
             UnicodeFileToHtmTextConverter target = new UnicodeFileToHtmTextConverter(stubSource);
             string result = target.ConvertToHtml();
 
-            Assert.AreEqual(result, "hello</b>how are you doing?<br />", "html converted text");
+            Assert.AreEqual(result, "hello<br />how are you doing?<br />", "html converted text");
         }
 
     }
