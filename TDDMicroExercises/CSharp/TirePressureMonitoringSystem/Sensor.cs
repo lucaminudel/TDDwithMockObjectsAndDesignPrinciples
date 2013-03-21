@@ -4,21 +4,25 @@ namespace TDDMicroExercises.TirePressureMonitoringSystem
 {
     public class Sensor
     {
+        //
+        // The reading of the pressure value from the sensor is simulated in this implementation.
+        // Because the focus of the exercise is on the other class.
+        //
+
         const double Offset = 16;
+        readonly Random _randomPressureSampleSimulator = new Random(42);
 
         public double PopNextPressurePsiValue()
         {
-            double pressureTelemetryValue;
-            SamplePressure(out pressureTelemetryValue);
+            double pressureTelemetryValue = ReadPressureSample();
 
             return Offset + pressureTelemetryValue;
         }
 
-        private static void SamplePressure(out double pressureTelemetryValue)
+        private double ReadPressureSample()
         {
-            // placeholder implementation that simulate a real sensor in a real tire
-            Random basicRandomNumbersGenerator = new Random(42);
-            pressureTelemetryValue = 6 * basicRandomNumbersGenerator.NextDouble() * basicRandomNumbersGenerator.NextDouble();
+            // Simulate info read from a real sensor in a real tire
+            return 6 * _randomPressureSampleSimulator.NextDouble() * _randomPressureSampleSimulator.NextDouble();
         }
     }
 }
