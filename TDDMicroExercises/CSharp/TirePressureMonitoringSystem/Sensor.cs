@@ -10,7 +10,7 @@ namespace TDDMicroExercises.TirePressureMonitoringSystem
         //
 
         const double Offset = 16;
-        readonly Random _randomPressureSampleSimulator = new Random(42);
+        readonly Random _randomPressureSampleSimulator = new Random();
 
         public double PopNextPressurePsiValue()
         {
