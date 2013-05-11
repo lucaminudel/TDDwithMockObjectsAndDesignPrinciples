@@ -30,7 +30,7 @@ class TelemetryDiagnosticControls
 		$this->_telemetryClient->disconnect();
 
 		$retryLeft = 3;
-		while ( $this->_telemetryClient->onlineStatus() == false && $retryLeft > 0 ) 
+		while ( $this->_telemetryClient->getOnlineStatus() == false && $retryLeft > 0 ) 
 		{
 			$this->_telemetryClient->connect(
 				TelemetryDiagnosticControls::DiagnosticChannelConnectionString
@@ -38,7 +38,7 @@ class TelemetryDiagnosticControls
 			$retryLeft -= 1;
 		}
 
-		if($this->_telemetryClient->onlineStatus() == false)
+		if($this->_telemetryClient->getOnlineStatus() == false)
 		{
 			throw new \Exception('Unable to connect.');
 		}

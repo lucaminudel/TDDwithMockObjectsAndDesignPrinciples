@@ -12,7 +12,7 @@ class TelemetryClient
 	/*private $_connectionEventsSimulator = new Random();
     private $_randomMessageSimulator 	= new Random();*/
 
-    public function onlineStatus()
+    public function getOnlineStatus()
     {
     	return $this->_onlineStatus;
     }
