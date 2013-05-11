@@ -19,7 +19,7 @@ class TelemetryClient
 
     public function connect( $telemetryServerConnectionString )
     {
-    	if( is_null($telemetryServerConnectionString) || is_empty($telemetryServerConnectionString) ) 
+    	if( is_null($telemetryServerConnectionString) || empty($telemetryServerConnectionString) ) 
     	{
     		throw new \InvalidArgumentException();
     	}
@@ -37,7 +37,7 @@ class TelemetryClient
 
     public function send( $message )
     {
-    	if( is_null($message) || is_empty($message) ) {
+    	if( is_null($message) || empty($message) ) {
     		throw new \InvalidArgumentException();
     	}
 
