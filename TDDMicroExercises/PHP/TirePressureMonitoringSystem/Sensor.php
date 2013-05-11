@@ -1,5 +1,6 @@
 <?php
 
+namespace TDDMicroExercises\PHP\TirePressureMonitoringSystem;
 
 class Sensor 
 {

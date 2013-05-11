@@ -1,5 +1,7 @@
 <?php
 
+namespace TDDMicroExercises\PHP\TirePressureMonitoringSystem;
+
 class Alarm
 {
 	const LOW_PRESSURE_TRESHOLD 	= 17;
