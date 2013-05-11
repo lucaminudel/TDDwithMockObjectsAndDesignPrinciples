@@ -2,7 +2,7 @@
 
 Here you can find:
 
--  the code of [TDD micro-exercises] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises#readme) (C#, JavaScript, Java, Python, Ruby)
+-  the code of [TDD micro-exercises] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises#readme) (C#, JavaScript, Java, Python, Ruby, PHP)
 -  a [proposed solution] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises.ProposedSolution#readme) 
 -  share [your solution] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises.YoursSolutions#readme) 
 -  the [presentation] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/blob/master/Slides/TDD-SOLID.pdf?raw=true)
