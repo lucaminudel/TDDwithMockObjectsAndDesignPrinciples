@@ -13,7 +13,7 @@ class UnicodeFileToHtmlTextConverter
 
     public function convertToHtml()
     {
-        $unicodeFileStrem = fopen($this->_fullFilenameWithPath);
+        $unicodeFileStrem = fopen($this->_fullFilenameWithPath, 'r+');
         $html = '';
 
         while ( $line = fgets($unicodeFileStrem)) 
@@ -21,6 +21,8 @@ class UnicodeFileToHtmlTextConverter
             $html .= htmlentities($line);
             $html .= "<br />";
         }
+
+        fclose($unicodeFileStrem);
 
         return $html;
     }
