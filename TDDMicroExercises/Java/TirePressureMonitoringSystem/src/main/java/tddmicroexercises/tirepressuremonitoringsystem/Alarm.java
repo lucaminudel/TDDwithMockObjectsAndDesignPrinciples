@@ -8,7 +8,6 @@ public class Alarm
     Sensor sensor = new Sensor();
 
     boolean alarmOn = false;
-    private long alarmCount = 0;
 
     public void check()
     {
@@ -17,7 +16,6 @@ public class Alarm
         if (psiPressureValue < LowPressureThreshold || HighPressureThreshold < psiPressureValue)
         {
             alarmOn = true;
-            alarmCount += 1;
         }
     }
 
