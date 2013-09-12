@@ -9,7 +9,7 @@ namespace TDDMicroExercises.OneSolution.TirePressureMonitoringSystem.Tests
 
         public void StubCallToPopNextPressurePsiValue(double returnedValue) 
         {
-            StubCallToPopNextPressurePsiValues(new double[] { returnedValue });
+            StubCallToPopNextPressurePsiValues(new[] { returnedValue });
         }
 
         public void StubCallToPopNextPressurePsiValues(double[] returnedValues)

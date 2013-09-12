@@ -5,11 +5,9 @@ namespace TDDMicroExercises.OneSolution.TirePressureMonitoringSystem
         public const double LowPressureTreshold = 17;
         public const double HighPressureTreshold = 21;
 
-        ISensor _sensor;
+        readonly ISensor _sensor;
 
         bool _alarmOn = false;
-        private long _alarmCount = 0;
-
 
         public Alarm() : this(new Sensor())
         {
@@ -27,7 +25,6 @@ namespace TDDMicroExercises.OneSolution.TirePressureMonitoringSystem
             if (psiPressureValue < LowPressureTreshold || HighPressureTreshold < psiPressureValue)
             {
                 _alarmOn = true;
-                _alarmCount += 1;
             }
         }
 
