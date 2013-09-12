@@ -53,13 +53,11 @@ namespace TDDMicroExercises.TelemetrySystem
             if (message == DiagnosticMessage)
 			{
 			    _diagnosticMessageJustSent = true;
-
 			}
 			else
 			{
 			    _diagnosticMessageJustSent = false;
 			}
-	
 		}
 
 		public string Receive()
@@ -90,8 +88,8 @@ namespace TDDMicroExercises.TelemetrySystem
 			{                
 				// Simulate the reception of a response message returning a random message.
 				message = string.Empty;
-                int messageLenght = _randomMessageSimulator.Next(50, 110);
-				for(int i = messageLenght; i > 0; --i)
+                int messageLength = _randomMessageSimulator.Next(50, 110);
+				for(int i = messageLength; i > 0; --i)
 				{
                     message += (char)_randomMessageSimulator.Next(40, 126);
 				}

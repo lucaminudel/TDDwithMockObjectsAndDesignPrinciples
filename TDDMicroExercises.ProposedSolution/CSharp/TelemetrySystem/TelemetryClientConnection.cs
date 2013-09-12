@@ -5,7 +5,7 @@ namespace TDDMicroExercises.OneSolution.TelemetrySystem
     public class TelemetryClientConnection : IConnection
     {
         private bool _onlineStatus;
-        private readonly Random _connectionEventsSimulator = new Random(42);
+        private readonly Random _connectionEventsSimulator = new Random();
 
         public bool OnlineStatus
         {
@@ -19,8 +19,8 @@ namespace TDDMicroExercises.OneSolution.TelemetrySystem
                 throw new ArgumentNullException();
             }
 
-            // simulate the operation on a real modem
-            bool success = _connectionEventsSimulator.Next(1, 10) <= 8;
+            // Fake the connection with 20% chances of success
+            bool success = _connectionEventsSimulator.Next(1, 10) <= 2;
 
             _onlineStatus = success;
         }
