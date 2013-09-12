@@ -5,7 +5,7 @@ namespace TDDMicroExercises.OneSolution.UnicodeFileToHtmTextConverter
 {
     public class UnicodeFileToHtmTextConverter
     {
-        private IUnicodeTextSource _textSource;
+        private readonly IUnicodeTextSource _textSource;
 
         public UnicodeFileToHtmTextConverter(string fullFilenameWithPath)
             : this (new UnicodeTextSourceFromFile(fullFilenameWithPath))

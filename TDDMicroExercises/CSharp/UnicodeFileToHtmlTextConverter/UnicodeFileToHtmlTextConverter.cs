@@ -5,7 +5,7 @@ namespace TDDMicroExercises.UnicodeFileToHtmlTextConverter
 {
     public class UnicodeFileToHtmlTextConverter
     {
-        private string _fullFilenameWithPath;
+        private readonly string _fullFilenameWithPath;
 
 
         public UnicodeFileToHtmlTextConverter(string fullFilenameWithPath)
