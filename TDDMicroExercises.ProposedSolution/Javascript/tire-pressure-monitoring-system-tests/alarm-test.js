@@ -11,7 +11,7 @@ describe('Tyre Pressure Monitoring System', function () {
 		});
 
 		it('a normal pressure value should not raise the alarm', function () {
-			spyOn(stubSensor, 'popNextPressurePsiValue').andCallFake(function () { return 19; });
+			spyOn(stubSensor, 'popNextPressurePsiValue').andCallFake(function () { return Alarm.LowPressureThreshold() +2; });
 
 			target.check();
 
@@ -19,7 +19,7 @@ describe('Tyre Pressure Monitoring System', function () {
 		});
 
 		it('a pressure value out of range should raise the alarm', function () {
-			spyOn(stubSensor, 'popNextPressurePsiValue').andCallFake(function () { return 22; });
+			spyOn(stubSensor, 'popNextPressurePsiValue').andCallFake(function () { return Alarm.HighPressureThreshold() +1; });
 
 			target.check();
 
@@ -28,7 +28,7 @@ describe('Tyre Pressure Monitoring System', function () {
 
 
 		it('a normal pressure value after an out of range pressure value should keep the alarm on', function () {
-			var sensorValueStream = [22, 19];
+			var sensorValueStream = [Alarm.HighPressureThreshold() +1, Alarm.LowPressureThreshold() +2];
 			spyOn(stubSensor, 'popNextPressurePsiValue').andCallFake(function () { return sensorValueStream.pop(); });
 
 			target.check();

@@ -9,7 +9,7 @@ namespace TDDMicroExercises.OneSolution.TirePressureMonitoringSystem.Tests
         public void a_normal_pressure_value_should_not_raise_the_alarm()
         {
             var stubSensor = new StubSensor();
-            stubSensor.StubCallToPopNextPressurePsiValue(Alarm.LowPressureTreshold);
+            stubSensor.StubCallToPopNextPressurePsiValue(Alarm.LowPressureThreshold);
             var target = new Alarm(stubSensor);
 
             target.Check();
@@ -21,7 +21,7 @@ namespace TDDMicroExercises.OneSolution.TirePressureMonitoringSystem.Tests
         public void a_pressure_value_out_of_range_should_raise_the_alarm()
         {
             var stubSensor = new StubSensor();
-            stubSensor.StubCallToPopNextPressurePsiValue(Alarm.LowPressureTreshold -1);
+            stubSensor.StubCallToPopNextPressurePsiValue(Alarm.LowPressureThreshold -1);
             var target = new Alarm(stubSensor);
 
             target.Check();
@@ -33,7 +33,7 @@ namespace TDDMicroExercises.OneSolution.TirePressureMonitoringSystem.Tests
         public void a_normal_pressure_value_after_an_out_of_range_pressure_value_should_keep_the_alarm_on()
         {
             var stubSensor = new StubSensor();
-            stubSensor.StubCallToPopNextPressurePsiValues(new[] { Alarm.LowPressureTreshold, Alarm.LowPressureTreshold - 1, Alarm.LowPressureTreshold });
+            stubSensor.StubCallToPopNextPressurePsiValues(new[] { Alarm.LowPressureThreshold, Alarm.LowPressureThreshold - 1, Alarm.LowPressureThreshold });
             var target = new Alarm(stubSensor);
 
             target.Check();

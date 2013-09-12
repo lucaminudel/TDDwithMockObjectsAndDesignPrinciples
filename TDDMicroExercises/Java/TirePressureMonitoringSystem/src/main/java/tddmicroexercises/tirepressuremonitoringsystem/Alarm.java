@@ -1,9 +1,9 @@
 package tddmicroexercises.tirepressuremonitoringsystem;
 
-public class Alarm implements IAlarm
+public class Alarm
 {
-    private final double LowPressureTreshold = 17;
-    private final double HighPressureTreshold = 21;
+    private final double LowPressureThreshold = 17;
+    private final double HighPressureThreshold = 21;
 
     Sensor sensor = new Sensor();
 
@@ -14,7 +14,7 @@ public class Alarm implements IAlarm
     {
         double psiPressureValue = sensor.popNextPressurePsiValue();
 
-        if (psiPressureValue < LowPressureTreshold || HighPressureTreshold < psiPressureValue)
+        if (psiPressureValue < LowPressureThreshold || HighPressureThreshold < psiPressureValue)
         {
             alarmOn = true;
             alarmCount += 1;
