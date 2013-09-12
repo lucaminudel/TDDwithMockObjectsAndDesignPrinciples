@@ -8,14 +8,14 @@ namespace TDDMicroExercises.OneSolution.TelemetrySystem.Tests
         [Test]
         public void CheckTransmission_should_send_a_diagnostic_message_and_receive_a_status_message_response()
         {
-            StubTelemetryConnection stubTelemetryConnection = new StubTelemetryConnection();
+            var stubTelemetryConnection = new StubTelemetryConnection();
             stubTelemetryConnection.StubGetOnlineStatus(true);
 
-            MockTelemetryDataChannel mockTelemetryDataChannel = new MockTelemetryDataChannel();
+            var mockTelemetryDataChannel = new MockTelemetryDataChannel();
             mockTelemetryDataChannel.SetExpectedCallToSend(TelemetryDataChannel.DiagnosticMessage);
             mockTelemetryDataChannel.SetExpectedCallToReceive("status report");
 
-            TelemetryDiagnosticControls target = new TelemetryDiagnosticControls(stubTelemetryConnection, mockTelemetryDataChannel);
+            var target = new TelemetryDiagnosticControls(stubTelemetryConnection, mockTelemetryDataChannel);
 
 
             target.CheckTransmission();
