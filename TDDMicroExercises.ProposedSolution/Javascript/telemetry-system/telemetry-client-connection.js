@@ -4,11 +4,8 @@ TelemetryClientConnection = function() {
 	
 };
 
-
-
 TelemetryClientConnection.prototype = {
 
-	// simulate the operation on a real modem
 	_connectionEventsSimulator: function (min, max) {
 		var delta = max + 1 - min;
 		return min + Math.floor(delta * Math.random());
@@ -19,14 +16,14 @@ TelemetryClientConnection.prototype = {
 	},
 	
 	connect: function(telemetryServerConnectionString) {
-			if (typeof(telemetryServerConnectionString) === 'undefined' || telemetryServerConnectionString === '') {
-				throw 'missing telemetryServerConnectionString parameter';
-			}
+		if (typeof(telemetryServerConnectionString) === 'undefined' || telemetryServerConnectionString === '') {
+			throw 'missing telemetryServerConnectionString parameter';
+		}
 
-			// simulate the operation on a real modem
-			var success = this._connectionEventsSimulator(1, 10) <= 8;
+        // Fake the connection with 20% chances of success
+        var success = this._connectionEventsSimulator(1, 10) <= 2;
 
-			this._onlineStatus = success;
+		this._onlineStatus = success;
 	},
 	
 	disconnect: function () {
