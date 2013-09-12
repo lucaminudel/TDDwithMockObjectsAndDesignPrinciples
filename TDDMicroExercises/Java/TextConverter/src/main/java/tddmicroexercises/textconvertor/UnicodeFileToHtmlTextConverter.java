@@ -1,10 +1,10 @@
 package tddmicroexercises.textconvertor;
 
+import org.apache.commons.lang3.StringEscapeUtils;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-
-import org.apache.commons.lang.StringEscapeUtils;
 
 public class UnicodeFileToHtmlTextConverter
 {
@@ -23,7 +23,7 @@ public class UnicodeFileToHtmlTextConverter
 	    String html = "";
 	    while (line != null)
 	    {
-	            html += StringEscapeUtils.escapeHtml(line);
+	            html += StringEscapeUtils.escapeHtml4(line);
 	            html += "<br />";
 	            line = reader.readLine();
 	    }
