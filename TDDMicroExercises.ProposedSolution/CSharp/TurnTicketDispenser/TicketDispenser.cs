@@ -8,7 +8,6 @@ namespace TDDMicroExercises.OneSolution.TurnTicketDispenser
         {
         }
 
-
         public TicketDispenser(ITurnNumberSequence turnNumberSequence)
         {
             this.turnNumberSequence = turnNumberSequence;
@@ -17,7 +16,7 @@ namespace TDDMicroExercises.OneSolution.TurnTicketDispenser
         public TurnTicket GetTurnTicket()
         {
             int newTurnNumber = turnNumberSequence.GetNextTurnNumber();
-            TurnTicket newTurnTicket = new TurnTicket(newTurnNumber);
+            var newTurnTicket = new TurnTicket(newTurnNumber);
 
             return newTurnTicket;
         }

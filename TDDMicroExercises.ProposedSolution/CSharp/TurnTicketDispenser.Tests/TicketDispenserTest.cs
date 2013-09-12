@@ -8,7 +8,7 @@ namespace TDDMicroExercises.OneSolution.TurnTicketDispenser.Tests
         [Test]
         public void A_new_ticket_must_have_the_turn_number_subsequent_to_the_previous_ticket()
         {
-            TicketDispenser ticketDispenser = new TicketDispenser();
+            var ticketDispenser = new TicketDispenser();
             TurnTicket previousTicket = ticketDispenser.GetTurnTicket();
 
             TurnTicket newTicket = ticketDispenser.GetTurnTicket();
@@ -19,10 +19,10 @@ namespace TDDMicroExercises.OneSolution.TurnTicketDispenser.Tests
         [Test]
         public void A_new_ticket_must_have_the_turn_number_subsequent_to_the_previous_ticket_from_another_dispencer()
         {
-            TicketDispenser firstTicketDispenser = new TicketDispenser();
+            var firstTicketDispenser = new TicketDispenser();
             TurnTicket previousTicket = firstTicketDispenser.GetTurnTicket();
 
-            TicketDispenser secondTicketDispenser = new TicketDispenser();
+            var secondTicketDispenser = new TicketDispenser();
             TurnTicket newTicket = secondTicketDispenser.GetTurnTicket();
 
             Assert.Greater(newTicket.TurnNumber, previousTicket.TurnNumber, "turn number");
@@ -31,9 +31,9 @@ namespace TDDMicroExercises.OneSolution.TurnTicketDispenser.Tests
         [Test]
         public void After_ticket_10_come_ticket_11()
         {
-            MockTurnNumberSequence mockTurnNumberSequence = new MockTurnNumberSequence();
+            var mockTurnNumberSequence = new MockTurnNumberSequence();
             mockTurnNumberSequence.SetExpectedGetNextTurnNumber(11);
-            TicketDispenser ticketDispenser = new TicketDispenser(mockTurnNumberSequence);
+            var ticketDispenser = new TicketDispenser(mockTurnNumberSequence);
 
             TurnTicket newTicket = ticketDispenser.GetTurnTicket();
 
