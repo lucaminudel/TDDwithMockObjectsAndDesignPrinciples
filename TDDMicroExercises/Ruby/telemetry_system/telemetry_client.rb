@@ -1,9 +1,13 @@
 class TelemetryClient
-  DIAGNOSTICMESSAGE = "AT#UD"
+
+  # The communication with the server is simulated in this implementation.
+  #Because the focus of the exercise is on the other class.
+
+  DIAGNOSTIC_MESSAGE = 'AT#UD'
 
   def initialize
     @online_status = false
-    @diagnostic_message_result = ""
+    @diagnostic_message_just_sent = false
   end
 
   def online_status
@@ -11,12 +15,12 @@ class TelemetryClient
   end
 
   def connect(telemetry_server_connection_string)
-    if (telemetry_server_connection_string.nil? || telemetry_server_connection_string == "")
-      raise Exception, "Argument Null"
+    if telemetry_server_connection_string.nil? || telemetry_server_connection_string == ''
+      raise Exception, 'Argument Null'
     end
 
-    #simulate the operation on a real modem
-    success = (1 + rand(10)) <= 8
+    # Fake the connection with 20% chances of success
+    success = rand() <= 0.2
 
     @online_status = success
   end
@@ -26,36 +30,41 @@ class TelemetryClient
   end
 
   def send(message)
-    if (message.nil? || message == "")
-      raise Exception, "Argument Null"
+    if message.nil? || message == ''
+      raise Exception, 'Argument Null'
     end
 
-    if (message == DIAGNOSTICMESSAGE)
-      #simulate a status report
-      @diagnostic_message_result =
-        "LAST TX rate................ 100 MBPS\nHIGHEST TX rate............. 100 MBPS\nLAST RX rate................ 100 MBPS\nHIGHEST RX rate............. 100 MBPS\nBIT RATE.................... 100000000\nWORD LEN.................... 16\nWORD/FRAME.................. 511\nBITS/FRAME.................. 8192\nMODULATION TYPE............. PCM/FM\nTX Digital Los.............. 0.75\nRX Digital Los.............. 0.10\nBEP Test.................... -5\nLocal Rtrn Count............ 00\nRemote Rtrn Count........... 00"
+    # The simulation of Send() actually just remember if the last message sent was a diagnostic message.
+    #This information will be used to simulate the Receive(). Indeed there is no real server listening.
+    @diagnostic_message_just_sent = message == DIAGNOSTIC_MESSAGE
+end
 
-      return
-    end
+  def receive
+    message = ''
 
-    #here should go the real Send operation
-  end
-
-  def receive 
-    if (!@diagnostic_message_result.nil? && @diagnostic_message_result != "")
-      message = @diagnostic_message_result
-      @diagnostic_message_result = "" 
+    if @diagnostic_message_just_sent
+      message = "LAST TX rate................ 100 MBPS\r\n" \
+              + "HIGHEST TX rate............. 100 MBPS\r\n" \
+              + "LAST RX rate................ 100 MBPS\r\n" \
+              + "HIGHEST RX rate............. 100 MBPS\r\n" \
+              + "BIT RATE.................... 100000000\r\n" \
+              + "WORD LEN.................... 16\r\n" \
+              + "WORD/FRAME.................. 511\r\n" \
+              + "BITS/FRAME.................. 8192\r\n" \
+              + "MODULATION TYPE............. PCM/FM\r\n" \
+              + "TX Digital Los.............. 0.75\r\n" \
+              + "RX Digital Los.............. 0.10\r\n" \
+              + "BEP Test.................... -5\r\n"  \
+              + "Local Rtrn Count............ 00\r\n"  \
+              + "Remote Rtrn Count........... 00"
     else
-      #simulate a received message
-      message = "" 
-      message_length = 50 + rand(110)
-      i = message_length 
-      while i >= 0
-        message += (40 + rand(126)).chr
-        i -= 1
+      # Simulate the reception of a response message returning a random message.
+
+      rand(50..110).times do
+        message += rand(40..126).chr()
       end
     end
 
-    return message
+    message
   end
 end
