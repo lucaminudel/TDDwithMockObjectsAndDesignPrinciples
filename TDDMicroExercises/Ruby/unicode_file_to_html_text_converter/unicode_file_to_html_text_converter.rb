@@ -1,18 +1,20 @@
+require 'cgi'
+
 class UnicodeFileToHtmTextConverter
-  def initialize(full_file_name_with_path)
-    @full_file_name_with_path = full_file_name_with_path 
+
+  def initialize(file_path)
+    @full_file_name_with_path = file_path
   end
 
-  def convert_to_html 
-    html = "" 
+  def convert_to_html
+    text = File.open(@full_file_name_with_path).read
 
-    text = File.open(@full_file_name_with_path).read # Not exactly the same code in CSharp but same functionality!
-    text.gsub!(/\r\n?/, "\n")
+    html = ''
     text.each_line do |line|
-      html += HttpUtility.html_encode(line)
-      html += "<br />"
+      html += CGI::escapeHTML(line)
+      html += '<br />'
     end
 
-    return html
+    html
   end
 end
