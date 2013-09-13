@@ -1,24 +1,22 @@
-require_relative "./sensor"
+require_relative './sensor'
 
 class Alarm
-    LOWPRESSURETHRESHOLD = 17
-    HIGHPRESSURETHRESHOLD = 21
 
-    def initialize
-      @sensor = Sensor.new 
-      @alarm_on = false
-      @alarm_count = 0
+  attr_reader :alarm_on
+
+  def initialize
+    @sensor = Sensor.new
+    @alarm_on = false
+  end
+
+  def check
+    pressure = @sensor.pop_next_pressure_psi_value()
+
+    @alarm_on = true if pressure < LOW_PRESSURE || HIGH_PRESSURE < pressure
     end
 
-    def check
-      psi_pressure_value = @sensor.pop_next_pressure_psi_value
-      if psi_pressure_value < LOWPRESSURETHRESHOLD || HIGHPRESSURETHRESHOLD < psi_pressure_value 
-          @alarm_on = true
-          @alarm_count += 1
-      end
-    end
+private
 
-    def alarm_on 
-      return @alarm_on 
-    end
+  LOW_PRESSURE = 17
+  HIGH_PRESSURE = 21
 end
