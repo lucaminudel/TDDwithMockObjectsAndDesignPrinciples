@@ -1,6 +1,10 @@
 import random
 
 class TelemetryClient(object):
+
+    # The communication with the server is simulated in this implementation.
+    # Because the focus of the exercise is on the other class.
+
     DIAGNOSTIC_MESSAGE = "AT#UD"
 
     def __init__(self):
@@ -14,8 +18,8 @@ class TelemetryClient(object):
         if (telemetry_server_connection_string is None or telemetry_server_connection_string == ""):
             raise Exception()
 
-        # simulate the operation on a real modem
-        success = random.randint(0, 10) <= 8
+        # Fake the connection with 20% chances of success
+        success = random.randint(0, 10) <= 2
 
         self.online_status = success
 
