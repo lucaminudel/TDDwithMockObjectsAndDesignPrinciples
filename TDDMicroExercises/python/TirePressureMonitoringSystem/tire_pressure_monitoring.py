@@ -1,4 +1,3 @@
-
 import random
 
 class Sensor(object):
@@ -14,7 +13,7 @@ class Sensor(object):
 
     @staticmethod
     def sample_pressure():
-        # Simulate info read from a real sensor in a real tire
+        # placeholder implementation that simulate a real sensor in a real tire
         pressure_telemetry_value = 6 * random.random() * random.random()
         return pressure_telemetry_value
 
@@ -25,12 +24,12 @@ class Alarm(object):
         self._low_pressure_threshold = 17
         self._high_pressure_threshold = 21
         self._sensor = Sensor()
-        self.is_alarm_on = False
-
+        self._is_alarm_on = False
+        
     def check(self):
         psi_pressure_value = self._sensor.pop_next_pressure_psi_value()
         if psi_pressure_value < self._low_pressure_threshold or self._high_pressure_threshold < psi_pressure_value:
-            self.is_alarm_on = True
+            self._is_alarm_on = True
 
     @property
     def is_alarm_on(self):
