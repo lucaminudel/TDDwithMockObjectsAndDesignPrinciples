@@ -8,31 +8,40 @@ class TelemetryClient(object):
     DIAGNOSTIC_MESSAGE = "AT#UD"
 
     def __init__(self):
-        self.online_status = False
-        self.diagnostic_message_result = ""
+        self._online_status = False
+        self._diagnosticMessageJustSent = False
 
     def get_online_status(self):
-        return self.online_status
+        return self._online_status
 
     def connect(self, telemetry_server_connection_string):
         if (telemetry_server_connection_string is None or telemetry_server_connection_string == ""):
             raise Exception()
 
         # Fake the connection with 20% chances of success
-        success = random.randint(0, 10) <= 2
+        success = random.randint(1, 10) <= 2
 
-        self.online_status = success
+        self._online_status = success
 
     def disconnect(self):
-        self.online_status = False
+        self._online_status = False
 
     def send(self, message):
         if (message is None or message == ""):
             raise Exception()
 
+        # The simulation of Send() actually just remember if the last message sent was a diagnostic message.
+        # This information will be used to simulate the Receive(). Indeed there is no real server listening.
         if (message == TelemetryClient.DIAGNOSTIC_MESSAGE):
-            # simulate a status report
-            self.diagnostic_message_result = """\
+            self._diagnosticMessageJustSent = True
+        else:
+            self._diagnosticMessageJustSent = False
+
+
+    def receive(self):
+        if (self._diagnosticMessageJustSent):
+            # Simulate the reception of the diagnostic message
+            message = """\
 LAST TX rate................ 100 MBPS\r\n
 HIGHEST TX rate............. 100 MBPS\r\n
 LAST RX rate................ 100 MBPS\r\n
@@ -47,46 +56,39 @@ RX Digital Los.............. 0.10\r\n
 BEP Test.................... -5\r\n
 Local Rtrn Count............ 00\r\n
 Remote Rtrn Count........... 00"""
-
-            return
-        # here should go the real Send operation
-
-    def receive(self):
-        if (self.diagnostic_message_result is None or self.diagnostic_message_result == ""):
-            # simulate a received message
+            self._diagnosticMessageJustSent = False
+        else:
+            #  Simulate the reception of a response message returning a random message.
             message = ""
             messageLength = random.randint(0, 50) + 60
             i = messageLength
             while(i >= 0):
                 message += chr((random.randint(0, 40) + 86))
                 i -= 1
-        else:
-            message = self.diagnostic_message_result
-            self.diagnostic_message_result = ""
 
         return message
 
 class TelemetryDiagnosticControls:
-    DiagnosticChannelConnectionString = "*111#"
+    _DiagnosticChannelConnectionString = "*111#"
 
     def __init__(self):
-        self.telemetry_client = TelemetryClient()
+        self._telemetry_client = TelemetryClient()
         self.diagnostic_info = ""
 
     def check_transmission(self):
         self.diagnostic_info = ""
 
-        self.telemetry_client.disconnect()
+        self._telemetry_client.disconnect()
 
         retryLeft = 3
-        while (self.telemetry_client.get_online_status() == False and retryLeft > 0):
-            self.telemetry_client.connect(TelemetryDiagnosticControls.DiagnosticChannelConnectionString)
+        while (self._telemetry_client.get_online_status() == False and retryLeft > 0):
+            self._telemetry_client.connect(TelemetryDiagnosticControls._DiagnosticChannelConnectionString)
             retryLeft -= 1
 
-        if telemetry_client.get_online_status() == False:
+        if self._telemetry_client.get_online_status() == False:
             raise Exception("Unable to connect.")
 
-        self.telemetry_client.send(TelemetryClient.DIAGNOSTIC_MESSAGE)
-        self.diagnostic_info = self.telemetry_client.receive()
+        self._telemetry_client.send(TelemetryClient.DIAGNOSTIC_MESSAGE)
+        self.diagnostic_info = self._telemetry_client.receive()
 
 
