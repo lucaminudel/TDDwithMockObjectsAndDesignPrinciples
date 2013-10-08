@@ -15,8 +15,6 @@ Write the unit tests for the Alarm class, refactor the code as much as you need 
 
 The Alarm class is designed to monitor tire pressure and set an alarm if the pressure falls outside of the expected range. The Sensor class provided for the exercise fakes the behaviour of a real tire sensor, providing random but realistic values.
 
-Note that there is a MockAlarm and a StubAlarm class provided in the "tests" folder. The purpose of these is purely to demonstrate how a mock and a stub look, you won't need them to complete the exercise.
-
 #### 2. **UnicodeFileToHtmTextConverter exercise**: 
 Write the unit tests for the UnicodeFileToHtmTextConverter class, refactor the code as much as you need to make the class testable.
 
