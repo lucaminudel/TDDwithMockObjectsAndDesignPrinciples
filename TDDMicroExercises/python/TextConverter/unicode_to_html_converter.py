@@ -1,4 +1,4 @@
-import html as html_converter
+import cgi
 
 class UnicodeFileToHtmlTextConverter(object):
 
@@ -10,7 +10,7 @@ class UnicodeFileToHtmlTextConverter(object):
         html = ""
         for line in f:
             line = line.rstrip()
-            html += html_converter.escape(line, quote=True)
+            html += cgi.escape(line, quote=True)
             html += "<br />"
 
         return html
