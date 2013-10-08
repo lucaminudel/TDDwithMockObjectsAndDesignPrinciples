@@ -5,11 +5,11 @@ class Sensor(object):
     # The reading of the pressure value from the sensor is simulated in this implementation.
     # Because the focus of the exercise is on the other class.
 
-    OFFSET = 16
+    __OFFSET = 16
         
     def pop_next_pressure_psi_value(self):
         pressure_telemetry_value = self.sample_pressure()
-        return Sensor.OFFSET + pressure_telemetry_value
+        return Sensor.__OFFSET + pressure_telemetry_value
 
     @staticmethod
     def sample_pressure():
@@ -21,8 +21,8 @@ class Sensor(object):
 class Alarm(object):
 
     def __init__(self):
-        self._low_pressure_threshold = 17
-        self._high_pressure_threshold = 21
+        self._low_pressure_threshold = 17.0
+        self._high_pressure_threshold = 21.0
         self._sensor = Sensor()
         self._is_alarm_on = False
         
