@@ -13,9 +13,7 @@ Apply the unit testing style and framework you are most comfortable with. You ca
 #### 1. **TirePressureMonitoringSystem exercise**:  
 Write the unit tests for the Alarm class, refactor the code as much as you need to make the class testable.
 
-The Alarm class is designed to monitor tire pressure and set an alarm if the pressure falls outside of the expected range. The Sensor class provided for the exercise fakes the behaviour of a real tire sensor, providing random but realistic values.
-
-Note that there is a MockAlarm and a StubAlarm class provided in the "tests" folder. The purpose of these is purely to demonstrate how a mock and a stub look, you won't need them to complete the exercise.
+The Alarm class is designed to monitor tire pressure and set an alarm if the pressure falls outside of the expected range. The Sensor class provided for the exercise simulates the behaviour of a real tire sensor, providing random but realistic values.
 
 #### 2. **UnicodeFileToHtmTextConverter exercise**: 
 Write the unit tests for the UnicodeFileToHtmTextConverter class, refactor the code as much as you need to make the class testable.
@@ -32,7 +30,7 @@ The TicketDispenser class is designed to be used to manage a queuing system in a
 #### 4. **TelemetrySystem exercise**: 
 Write the unit tests for the TelemetryDiagnosticControls class, refactor the code as much as you need to make the class testable.
 
-The responsibility of the TelemetryDiagnosticControls class is to establish a connection to the telemetry server (through the TelemetryClient), send a diagnostic request and successfully receive the response that contains the diagnostic info. The TelemetryClient class provided for the exercise fakes the behavior of the real TelemetryClient class, and can respond with either the diagnostic information or a random sequence. The real TelemetryClient class would connect and communicate with the telemetry server via tcp/ip.
+The responsibility of the TelemetryDiagnosticControls class is to establish a connection to the telemetry server (through the TelemetryClient), send a diagnostic request and successfully receive the response that contains the diagnostic info. The TelemetryClient class provided for the exercise simulates the behavior of the real TelemetryClient class, and can respond with either the diagnostic information or a random sequence. The real TelemetryClient class would connect and communicate with the telemetry server via tcp/ip.
 
 ## A possible solution
 
