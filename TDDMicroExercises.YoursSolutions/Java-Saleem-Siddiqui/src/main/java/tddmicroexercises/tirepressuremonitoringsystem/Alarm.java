@@ -5,15 +5,16 @@ public class Alarm
     private final double LowPressureThreshold = 17;
     private final double HighPressureThreshold = 21;
 
-    ISensor sensor = new Sensor();
+    private ISensor sensor;
 
-    boolean alarmOn = false;
+    private boolean alarmOn = false;
 
     public Alarm(ISensor sensor) {
 	this.sensor = sensor;
     }
 
     public Alarm() {
+	this(new Sensor());
     }
 
     public void check()
