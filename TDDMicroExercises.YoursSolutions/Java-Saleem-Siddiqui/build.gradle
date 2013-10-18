@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'application'
+
+sourceCompatibility = 1.6
+version = '1.0'
+
+jar {
+    manifest {
+    attributes 'Implementation-Title': 'TDD Micro Exercises - Java', 'Implementation-Version': version
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // hamcrest has to be before junit: http://stackoverflow.com/questions/7869711/getting-nosuchmethoderror-org-hamcrest-matcher-describemismatch-when-running
+    testCompile group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3'
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+    testCompile group: 'org.mockito', name: 'mockito-all', version: '1.9.5'
+}
