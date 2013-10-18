@@ -9,25 +9,18 @@ import static java.lang.Boolean.TRUE;
 
 public class AlarmTestUsingCustomMock {
     private final class MockSensor implements ISensor {
-	    private double _psiValue = 0D;
 	    private int _popCount = 0;
 
 	    @Override
 	    public double popNextPressurePsiValue() {
 		_popCalled();
-		return _psiValue;
-	    }
-	    void _setPsiValue(double psiValue){
-		this._psiValue = psiValue;
+		return 0D;
 	    }
 	    void _popCalled(){
 		_popCount++;
 	    }
 	    int _getPopCallCount() {
 		return _popCount;
-	    }
-	    void _resetPopCallCount() {
-		_popCount = 0;
 	    }
 	};
 
@@ -39,7 +32,6 @@ public class AlarmTestUsingCustomMock {
 	sensor = new MockSensor();
 	alarm = new Alarm(sensor);
     }
-
 
     @Test
     public void findingIfAlarmIsOnDoesNotCallSensor() {
