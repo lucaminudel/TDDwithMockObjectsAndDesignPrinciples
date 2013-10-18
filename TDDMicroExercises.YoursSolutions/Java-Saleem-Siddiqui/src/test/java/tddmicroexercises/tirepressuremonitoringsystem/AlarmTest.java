@@ -56,4 +56,16 @@ public class AlarmTest {
 	alarm.check();
 	assertThat(alarm.isAlarmOn(), is(FALSE));
     }
+
+    @Test
+    public void findingIfAlarmIsOnDoesNotCallSensor() {
+	alarm.isAlarmOn();
+	verify(sensor, never()).popNextPressurePsiValue();
+    }
+
+    @Test
+    public void checkingAlarmCallsSensor(){
+	alarm.check();
+	verify(sensor).popNextPressurePsiValue();
+    }
 }
