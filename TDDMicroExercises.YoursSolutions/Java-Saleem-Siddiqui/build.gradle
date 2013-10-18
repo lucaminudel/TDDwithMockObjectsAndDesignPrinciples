@@ -2,7 +2,7 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'application'
 
-sourceCompatibility = 1.6
+sourceCompatibility = 1.7
 version = '1.0'
 
 jar {
