@@ -11,16 +11,17 @@ import static org.mockito.Mockito.*;
 import static org.mockito.MockitoAnnotations.initMocks;
 
 public class AlarmTest {
+
+    private static final double LOW_PRESSURE_THRESHOLD = 17;
+    private static final double HIGH_PRESSURE_THRESHOLD = 21;
+
     @Mock private ISensor sensor;
+    private Alarm alarm;
 
     @Before
     public void setUp() {
 	initMocks(this);
-    }
-
-    @Test
-    public void canCreateAlarmWithGivenSensor() {
-	new Alarm(sensor);
+	alarm = new Alarm(sensor);
     }
 
     @Test
@@ -29,10 +30,30 @@ public class AlarmTest {
     }
 
     @Test
-    public void alarmIsOnWhenSensorValueBelowThreshold() {
+    public void alarmIsOnWhenSensorValueBelowLowThreshold() {
 	when(sensor.popNextPressurePsiValue()).thenReturn(0D);
-	Alarm alarm = new Alarm(sensor);
 	alarm.check();
 	assertThat(alarm.isAlarmOn(), is(TRUE));
+    }
+
+    @Test
+    public void alarmIsOnWhenSensorValueAboveHighThreshold() {
+	when(sensor.popNextPressurePsiValue()).thenReturn(Double.MAX_VALUE);
+	alarm.check();
+	assertThat(alarm.isAlarmOn(), is(TRUE));
+    }
+
+    @Test
+    public void alarmIsOffWhenValueEqualsLowThreshold() {
+	when(sensor.popNextPressurePsiValue()).thenReturn(LOW_PRESSURE_THRESHOLD);
+	alarm.check();
+	assertThat(alarm.isAlarmOn(), is(FALSE));
+    }
+
+    @Test
+    public void alarmIsOffWhenValueEqualsHighThreshold() {
+	when(sensor.popNextPressurePsiValue()).thenReturn(HIGH_PRESSURE_THRESHOLD);
+	alarm.check();
+	assertThat(alarm.isAlarmOn(), is(FALSE));
     }
 }
