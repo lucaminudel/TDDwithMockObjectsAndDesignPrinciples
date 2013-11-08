@@ -47,12 +47,12 @@ Questions for all the exercises
 \fs24    External dependency here is the Sensor that return random values.\
    SOLID violations\
 \pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural
-\ls6\ilvl0\cf0 {\listtext	\uc0\u8259 	}The instantiation of Sensor in the constructor violate the OCP and the DIP\
+\ls6\ilvl0\cf0 {\listtext	\uc0\u8259 	}The instantiation of Sensor in the constructor violate the OCP and the DIP\
 \pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural
-\ls7\ilvl0\cf0 {\listtext	\uc0\u8259 	}What about the hi/low pressure thresholds? Having them as constant is a violation of the OCP\
+\ls7\ilvl0\cf0 {\listtext	\uc0\u8259 	}What about the hi/low pressure thresholds? Having them as constant is a violation of the OCP\
 \pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural
 \ls8\ilvl0\cf0 {\listtext	\uc0\u8259 	}What about the expression that check if the pressure is inside the expected interval, is a violation of the OCP?
-\fs28 \
+\fs28 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 
 \fs24 \cf0 \
@@ -71,7 +71,7 @@ Questions for all the exercises
 \pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural
 \ls10\ilvl0\cf0 {\listtext	\uc0\u8259 	}Access to the file system's Open method and to the file violate the OCP and DIP.\uc0\u8232 Note the use of static methods and the access to 3rd party libraries, those are smells for OCP and eventually DIP violations.\u8232 Note the access to the file-system or any other external system. That's a smell for OCP and eventually DIP violations.\
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
-\cf0            Note the use of static methods to access a singleton (shared state, here is just a method), is a smells for violation of encapsulation and for OCP and eventually DIP violations.\
+\cf0            Note the call to the static method of an external class library, that's an high coupling with the library.\
 \pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural
 \ls11\ilvl0\cf0 {\listtext	\uc0\u8259 	}When you call ConvertToHtml() multiple times after the refactoring does it still works?\
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
@@ -113,8 +113,7 @@ Questions for all the exercises
 \ls15\ilvl0\cf0 {\listtext	\uc0\u8259 	}The instantiation in the constructor of the concrete class TelemetryClient that access an external system (the Telemetry server) is a violate the OCP and DIP.\
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 \cf0 \
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
-\cf0    Look [1] and [2]\
+   Look [1] and [2]\
 \
 \
 [1] Working Effectively With Legacy Code, Michael Feathers\
