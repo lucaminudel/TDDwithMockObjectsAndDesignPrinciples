@@ -18,7 +18,7 @@ namespace TDDMicroExercises.OneSolution.UnicodeFileToHtmTextConverter.Tests
         }
 
         [Test]
-        public void should_convert_greate_than_and_less_than()
+        public void should_convert_greater_than_and_less_than()
         {
             var stubSource = new StubUnicodeTextSource();
             stubSource.StubCallToGetTextReader("10 > 5; 5 < 10");
