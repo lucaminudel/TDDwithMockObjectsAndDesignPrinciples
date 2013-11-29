@@ -5,7 +5,7 @@ Here you can find:
 -  the code of [TDD micro-exercises] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises#readme) (C#, JavaScript, Java, Python, Ruby, PHP)
 -  a [proposed solution] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises.ProposedSolution#readme) 
 -  share [your solution] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises.YoursSolutions#readme) 
--  the coding dojo presentation (coming soon)
+-  the [coding dojo presentation] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/blob/master/Slides/Refactoring-legacy-code-driven-by-tests-full.pdf?raw=true)
 -  the [paper] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/blob/master/Paper/mockobjects_emergingproperties.pdf?raw=true) and the [paper's presentation] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/blob/master/Slides/TDD-SOLID.pdf?raw=true)
 
 Thanks to [Peter Rhys Thomas] (https://github.com/peterrhysthomas) for the Java porting of the TDD micro-exercises.
