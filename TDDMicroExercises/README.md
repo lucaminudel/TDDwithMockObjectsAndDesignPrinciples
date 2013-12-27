@@ -43,3 +43,13 @@ Here you find one of the possible solutions for the exercise and general comment
 
 Share your solutions [here] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises.YoursSolutions#readme).
 
+
+## Credits
+
+Thanks to [Emily Bache] (https://github.com/emilybache) for the Python version of the exercises and for including this kata in [The Coding Dojo Handbook] (https://leanpub.com/codingdojohandbook) by Emily Bache with foreword by Robert C. Martin.
+Thanks to [Peter Rhys Thomas] (https://github.com/peterrhysthomas) for theporting to Java.
+Thanks to [Sam Serpoosh] (https://github.com/Sam-Serpoosh) for the porting to Ruby.
+Thanks to [Arthur Almeida] (https://github.com/arthuralmeidap) for the porting to PHP. 
+Thank you all !
+
+If you want to contribute to the porting of the exercises and of the proposed solutions, start looking at the original C# version for strong-type languages and at the JavaScript version for dynamic languages.
