@@ -1,8 +1,10 @@
-# TDD micro-exercises
+# Kata: Refactoring legacy code driven by tests
+
+In this repository you'll find source code for four distinct coding challenges in Java, C#, Ruby, JavaScript and Python. You also find the [slides with the instructions] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/blob/master/Slides/Refactoring-legacy-code-driven-by-tests-full.pdf?raw=true) you can use in a coding dojo.
 
 ## Instructions
 
-In this repository you'll find starting code for four distinct problems. They could be code you inherited from a legacy code-base. Now you want to write unit tests for them, and that is harder than it needs to be. All of the code snippets fail to follow one or more of the SOLID principles.
+This could be code you just inherited from a legacy code-base. Now you want to write unit tests for it, and that is harder than it needs to be.
 
 For each exercise, there is only one class you are interested in writing tests for right now. As a first step, try to get some kind of test in place before you change the class at all. Identify why the class is hard to write tests for, and which SOLID principles are not being followed.
 
@@ -34,6 +36,10 @@ The responsibility of the TelemetryDiagnosticControls class is to establish a co
 
 ## A possible solution
 
-Here you find one of the possible solutions for the exercise: [proposed solution.] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises.ProposedSolution#readme) 
-Feel free to send your comments and questions.
+Here you find one of the possible solutions for the exercise and general comment to assess your solutions: [possible solutions.] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises.ProposedSolution#readme) 
+
+
+## Share your solutions
+
+Share your solutions [here] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises.YoursSolutions#readme).
 
