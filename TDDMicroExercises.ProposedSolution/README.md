@@ -1,4 +1,4 @@
-# TDD micro-exercises
+# Refactoring legacy code driven by tests - Kata
 
 ## A possible solution
 
