@@ -1,4 +1,4 @@
-# Kata: Refactoring legacy code driven by tests
+# Refactoring legacy code driven by tests - Kata
 
 In this repository you'll find source code for four distinct coding challenges in Java, C#, Ruby, JavaScript and Python. You also find the [slides with the instructions] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/blob/master/Slides/Refactoring-legacy-code-driven-by-tests-full.pdf?raw=true) you can use in a coding dojo.
 
