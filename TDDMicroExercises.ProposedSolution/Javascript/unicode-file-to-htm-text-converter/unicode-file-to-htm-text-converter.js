@@ -9,12 +9,16 @@ UnicodeFileToHtmTextConverter.CreateFromFileBlob = function(fileBlob) {
 
 UnicodeFileToHtmTextConverter.prototype = {
 
-	convertToHtml: function () {
+	convertToHtml: function (callback) {
 
-		var text = this._textStream.getText();
-		var htmlLines = this._basicHtmlEncode(text);
-
-		return htmlLines;
+		var self = this;
+		self._textStream.getText(function(text) {
+			var htmlLines = self._basicHtmlEncode(text);
+			if (callback) {
+				callback(htmlLines);
+			}
+		});
+		
 	},
 
 	_basicHtmlEncode: function (source) {
