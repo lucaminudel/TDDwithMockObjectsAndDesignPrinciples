@@ -6,17 +6,20 @@ UnicodeFileToHtmTextConverter = function(fileBlob) {
 
 UnicodeFileToHtmTextConverter.prototype = {
 
-	convertToHtml: function () {
+	convertToHtml: function (callback) {
 
+		var self = this;
 		var fileReader = new FileReader();
 		var text;
 		fileReader.onload = function(evt) {
 			text = evt.target.result;
+			var htmlLines = self._basicHtmlEncode(text);
+			if (callback) {
+				callback(htmlLines);
+			}
 		};
 		fileReader.readAsText(this._fileBlob);
 
-		var htmlLines = this._basicHtmlEncode(text);
-		return htmlLines;
 	},
 	
 	_basicHtmlEncode: function (source) {
