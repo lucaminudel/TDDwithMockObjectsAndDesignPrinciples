@@ -9,9 +9,9 @@ import static org.fest.assertions.api.Assertions.assertThat;
  */
 public class SensorTest {
     @Test
-    public void when_pop_next_pressure_psi_value_then_get_characterization() {
+    public void when_pop_next_pressure_psi_value_then_it_is_between_18_and_19() {
         Sensor sensor = new Sensor();
         sensor.popNextPressurePsiValue();
-        assertThat(sensor.popNextPressurePsiValue()).isGreaterThan(16.0);
+        assertThat(sensor.popNextPressurePsiValue()).isGreaterThan(18.0).isLessThan(19.0);
     }
 }
