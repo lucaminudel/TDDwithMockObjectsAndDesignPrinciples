@@ -38,4 +38,20 @@ public class AlarmTest {
 
         assertThat(alarm.isAlarmOn()).isEqualTo(true);
     }
+
+    @Test
+    public void given_psi_pressure_value_is_between_17_and_21_when_check_alarm_then_alarm_is_off() {
+        Sensor sensor = mock(Sensor.class);
+        when(sensor.popNextPressurePsiValue()).thenReturn(17.0).thenReturn(19.0).thenReturn(21.0);
+        Alarm alarm = new Alarm(sensor);
+
+        alarm.check();
+        assertThat(alarm.isAlarmOn()).isEqualTo(false);
+
+        alarm.check();
+        assertThat(alarm.isAlarmOn()).isEqualTo(false);
+
+        alarm.check();
+        assertThat(alarm.isAlarmOn()).isEqualTo(false);
+    }
 }
