@@ -27,4 +27,15 @@ public class AlarmTest {
 
         assertThat(alarm.isAlarmOn()).isEqualTo(true);
     }
+
+    @Test
+    public void given_psi_pressure_value_is_greater_than_21_when_check_alarm_then_alarm_is_on() {
+        Sensor sensor = mock(Sensor.class);
+        when(sensor.popNextPressurePsiValue()).thenReturn(22.0);
+        Alarm alarm = new Alarm(sensor);
+
+        alarm.check();
+
+        assertThat(alarm.isAlarmOn()).isEqualTo(true);
+    }
 }
