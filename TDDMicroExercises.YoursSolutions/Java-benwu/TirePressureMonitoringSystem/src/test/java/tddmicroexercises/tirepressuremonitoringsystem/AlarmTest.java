@@ -3,6 +3,8 @@ package tddmicroexercises.tirepressuremonitoringsystem;
 import org.junit.Test;
 
 import static org.fest.assertions.api.Assertions.assertThat;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 /**
  * Created by ben on 14-4-11.
