@@ -14,4 +14,9 @@ public class AlarmTest {
         alarm.check();
         assertThat(alarm.isAlarmOn()).isEqualTo(false);
     }
+
+    @Test
+    public void given_psi_pressure_value_is_less_than_17_when_check_alarm_then_alarm_is_on() {
+        assertThat(alarm.isAlarmOn()).isEqualTo(true);
+    }
 }
