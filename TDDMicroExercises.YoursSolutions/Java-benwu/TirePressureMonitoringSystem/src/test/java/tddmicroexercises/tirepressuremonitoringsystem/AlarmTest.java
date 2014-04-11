@@ -7,7 +7,9 @@ import org.junit.Test;
  */
 public class AlarmTest {
     @Test
-    public void given_psi_pressure_value_is_less_than_17_when_check_then_alarm_is_on() {
+    public void when_check_alarm_then_get_characterization() {
+        Alarm alarm = new Alarm();
+        alarm.check();
         assertThat(alarm.isAlarmOn()).isEqualTo(true);
     }
 }
