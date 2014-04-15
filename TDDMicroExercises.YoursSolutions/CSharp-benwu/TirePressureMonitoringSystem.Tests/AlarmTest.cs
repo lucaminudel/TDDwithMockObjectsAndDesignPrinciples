@@ -11,7 +11,9 @@ namespace TDDMicroExercises.TirePressureMonitoringSystem.Tests
         [Test]
         public void WHEN_check_pressure_value_in_alarm_THEN_get_characterization_of_whether_alarm_is_on()
         {
-            Assert.AreEqual(true, alarm.AlarmOn());
+            Alarm alarm = new Alarm();
+            alarm.Check();
+            Assert.AreEqual(true, alarm.AlarmOn);
         }
     }
 }
