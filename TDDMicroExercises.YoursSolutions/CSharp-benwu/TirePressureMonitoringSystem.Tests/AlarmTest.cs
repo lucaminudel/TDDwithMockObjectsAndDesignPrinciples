@@ -65,5 +65,24 @@ namespace TDDMicroExercises.TirePressureMonitoringSystem.Tests
             Assert.IsFalse(alarm.AlarmOn);
             sensor.Verify(s => s.PopNextPressurePsiValue());
         }
+
+        [Test]
+        public void GIVEN_pressure_psi_value_is_22_WHEN_check_pressure_value_in_alarm_THEN_alarm_is_on()
+        {
+            // Given
+            var sensor = new Mock<ISensor>();
+            var alarm = new Alarm(sensor.Object);
+
+            sensor
+                .Setup(s => s.PopNextPressurePsiValue())
+                .Returns(22.0);
+
+            // When
+            alarm.Check();
+
+            // Then
+            Assert.IsTrue(alarm.AlarmOn);
+            sensor.Verify(s => s.PopNextPressurePsiValue());
+        }
     }
 }
