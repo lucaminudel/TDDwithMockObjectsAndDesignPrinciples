@@ -13,7 +13,7 @@ namespace TDDMicroExercises.TirePressureMonitoringSystem.Tests
         public void WHEN_check_pressure_value_in_alarm_THEN_get_characterization_of_whether_alarm_is_on()
         {
             // Given
-            var sensor = new Mock<Sensor>();
+            var sensor = new Mock<ISensor>();
             var alarm = new Alarm(sensor.Object);
 
             sensor
