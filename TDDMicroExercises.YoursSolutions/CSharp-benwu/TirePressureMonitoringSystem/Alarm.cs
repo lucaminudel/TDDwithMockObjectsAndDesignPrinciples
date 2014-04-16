@@ -1,3 +1,5 @@
+using Moq;
+
 namespace TDDMicroExercises.TirePressureMonitoringSystem
 {
     public class Alarm
@@ -8,6 +10,11 @@ namespace TDDMicroExercises.TirePressureMonitoringSystem
         readonly Sensor _sensor = new Sensor();
 
         bool _alarmOn = false;
+
+        public Alarm(Sensor sensor)
+        {
+            this._sensor = sensor;
+        }
 
         public void Check()
         {
