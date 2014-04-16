@@ -16,6 +16,10 @@ namespace TDDMicroExercises.TirePressureMonitoringSystem.Tests
             var sensor = new Mock<Sensor>();
             var alarm = new Alarm(sensor.Object);
 
+            sensor
+                .Setup(s => s.PopNextPressurePsiValue())
+                .Returns(16.0);
+
             // When
             alarm.Check();
 
