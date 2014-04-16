@@ -10,7 +10,7 @@ namespace TDDMicroExercises.TirePressureMonitoringSystem.Tests
     public class AlarmTest
     {
         [Test]
-        public void WHEN_check_pressure_value_in_alarm_THEN_get_characterization_of_whether_alarm_is_on()
+        public void GIVEN_pressure_psi_value_is_16_WHEN_check_pressure_value_in_alarm_THEN_alarm_is_on()
         {
             // Given
             var sensor = new Mock<ISensor>();
@@ -25,6 +25,7 @@ namespace TDDMicroExercises.TirePressureMonitoringSystem.Tests
 
             // Then
             Assert.AreEqual(true, alarm.AlarmOn);
+            sensor.Verify(s => s.PopNextPressurePsiValue());
         }
     }
 }
