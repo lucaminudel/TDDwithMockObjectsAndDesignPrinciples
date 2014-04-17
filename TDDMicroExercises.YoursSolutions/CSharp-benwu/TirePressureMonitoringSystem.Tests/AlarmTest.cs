@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Moq;
+﻿using Moq;
 using NUnit.Framework;
 
 namespace TDDMicroExercises.TirePressureMonitoringSystem.Tests
