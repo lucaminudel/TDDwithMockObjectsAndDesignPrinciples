@@ -5,12 +5,12 @@ namespace TDDMicroExercises.UnicodeFileToHtmlTextConverter
 {
     public class UnicodeFileToHtmlTextConverter
     {
-        private readonly string _fullFilenameWithPath;
+        protected readonly string FullFilenameWithPath;
 
 
         public UnicodeFileToHtmlTextConverter(string fullFilenameWithPath)
         {
-            _fullFilenameWithPath = fullFilenameWithPath;
+            FullFilenameWithPath = fullFilenameWithPath;
         }
 
         public string ConvertToHtml()
@@ -33,7 +33,7 @@ namespace TDDMicroExercises.UnicodeFileToHtmlTextConverter
 
         protected virtual TextReader OpenTextReader()
         {
-            return File.OpenText(_fullFilenameWithPath);
+            return File.OpenText(FullFilenameWithPath);
         }
     }
 }
