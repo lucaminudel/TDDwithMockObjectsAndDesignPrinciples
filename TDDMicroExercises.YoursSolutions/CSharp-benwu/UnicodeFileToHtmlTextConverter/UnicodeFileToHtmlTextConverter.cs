@@ -31,7 +31,7 @@ namespace TDDMicroExercises.UnicodeFileToHtmlTextConverter
             }
         }
 
-        protected virtual StreamReader OpenTextReader()
+        protected virtual TextReader OpenTextReader()
         {
             return File.OpenText(_fullFilenameWithPath);
         }
