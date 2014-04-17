@@ -15,7 +15,7 @@ namespace TDDMicroExercises.UnicodeFileToHtmlTextConverter
 
         public string ConvertToHtml()
         {
-            using (TextReader unicodeFileStream = File.OpenText(_fullFilenameWithPath))
+            using (TextReader unicodeFileStream = OpenTextReader())
             {
                 string html = string.Empty;
 
@@ -29,6 +29,11 @@ namespace TDDMicroExercises.UnicodeFileToHtmlTextConverter
 
                 return html;
             }
+        }
+
+        protected virtual StreamReader OpenTextReader()
+        {
+            return File.OpenText(_fullFilenameWithPath);
         }
     }
 }
