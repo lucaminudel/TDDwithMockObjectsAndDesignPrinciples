@@ -10,12 +10,12 @@ namespace TDDMicroExercises.UnicodeFileToHtmlTextConverter.Tests
 
         protected override TextReader OpenTextReader()
         {
-            return OpenStringReader();
+            return OpenStringReader(new StringReader(FullFilenameWithPath));
         }
 
-        private StringReader OpenStringReader()
+        private StringReader OpenStringReader(StringReader strToBeConverted)
         {
-            return new StringReader(FullFilenameWithPath);
+            return strToBeConverted;
         }
     }
 }
