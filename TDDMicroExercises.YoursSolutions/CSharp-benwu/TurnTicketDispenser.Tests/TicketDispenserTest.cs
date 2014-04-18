@@ -26,5 +26,10 @@ namespace TDDMicroExercises.TurnTicketDispenser.Tests
             Assert.Greater(newTicket.TurnNumber, oldTicket.TurnNumber);
         }
 
+        [Test]
+        public void GIVEN_dispense_ticket_number_10_WHEN_dispense_a_new_ticket_THEN_the_new_ticket_is_number_11()
+        {
+            Assert.AreEqual(11, ticket.TurnNumber);
+        }
     }
 }
