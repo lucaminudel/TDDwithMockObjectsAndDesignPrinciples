@@ -29,6 +29,8 @@ namespace TDDMicroExercises.TurnTicketDispenser.Tests
         [Test]
         public void GIVEN_dispense_ticket_number_10_WHEN_dispense_a_new_ticket_THEN_the_new_ticket_is_number_11()
         {
+            TestingTicketDispenser testingTicketDispenser = new TestingTicketDispenser();
+            TurnTicket ticket = testingTicketDispenser.GetTurnTicket();
             Assert.AreEqual(11, ticket.TurnNumber);
         }
     }
