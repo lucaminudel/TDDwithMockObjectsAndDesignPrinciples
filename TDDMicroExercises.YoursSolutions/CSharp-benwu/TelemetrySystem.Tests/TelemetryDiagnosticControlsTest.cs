@@ -6,8 +6,9 @@ namespace TDDMicroExercises.TelemetrySystem.Tests
     public class TelemetryDiagnosticControlsTest
     {
         [Test]
-        public void CheckTransmission_should_send_a_diagnostic_message_and_receive_a_status_message_response()
+        public void WHEN_check_Transmision_THEN_get_characterization()
         {
+            Assert.AreEqual("", telementryDiagnosticControls.DiagnosticInfo);
         }
 
     }
