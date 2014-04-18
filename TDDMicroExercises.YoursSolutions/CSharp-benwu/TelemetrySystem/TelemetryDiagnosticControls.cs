@@ -10,9 +10,13 @@ namespace TDDMicroExercises.TelemetrySystem
         private readonly TelemetryClient _telemetryClient;
         private string _diagnosticInfo = string.Empty;
 
-        public TelemetryDiagnosticControls()
+        public TelemetryDiagnosticControls() : this (new TelemetryClient())
         {
-            _telemetryClient = new TelemetryClient();
+        }
+
+        public TelemetryDiagnosticControls(TelemetryClient telemetryClient)
+        {
+            _telemetryClient = telemetryClient;
         }
 
         public string DiagnosticInfo
