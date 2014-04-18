@@ -8,7 +8,11 @@ namespace TDDMicroExercises.TurnTicketDispenser.Tests
         [Test]
         public void GIVEN_dispense_a_ticket_WHEN_check_ticket_turn_number_THEN_get_characterization()
         {
-            Assert.AreEqual(0, ticket.TurnNumber);
+            TicketDispenser tickDispenser = new TicketDispenser();
+            TurnTicket ticket = tickDispenser.GetTurnTicket();
+            ticket = tickDispenser.GetTurnTicket();
+            ticket = tickDispenser.GetTurnTicket();
+            Assert.AreEqual(2, ticket.TurnNumber);
         }
     }
 }
