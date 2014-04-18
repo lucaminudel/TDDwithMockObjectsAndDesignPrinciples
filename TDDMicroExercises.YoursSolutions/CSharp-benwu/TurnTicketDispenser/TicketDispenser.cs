@@ -4,7 +4,8 @@ namespace TDDMicroExercises.TurnTicketDispenser
     {
         public virtual TurnTicket GetTurnTicket()
         {
-            int newTurnNumber = TurnNumberSequence.GetNextTurnNumber();
+            TurnNumberSequence turnNumberSequence = new TurnNumberSequence();
+            int newTurnNumber = turnNumberSequence.GetNextTurnNumber();
             var newTurnTicket = new TurnTicket(newTurnNumber);
 
             return newTurnTicket;

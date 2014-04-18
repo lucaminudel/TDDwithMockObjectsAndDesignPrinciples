@@ -1,10 +1,10 @@
 namespace TDDMicroExercises.TurnTicketDispenser
 {
-    public static class TurnNumberSequence
+    public class TurnNumberSequence
     {
         private static int _turnNumber = 0;
 
-        public static int GetNextTurnNumber()
+        public virtual int GetNextTurnNumber()
         {
             return _turnNumber++;
         }
