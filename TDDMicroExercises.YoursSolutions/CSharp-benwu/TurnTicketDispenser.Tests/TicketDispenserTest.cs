@@ -6,13 +6,12 @@ namespace TDDMicroExercises.TurnTicketDispenser.Tests
     public class TicketDispenserTest
     {
         [Test]
-        public void GIVEN_dispense_a_ticket_WHEN_check_ticket_turn_number_THEN_get_characterization()
+        public void GIVEN_dispense_a_ticket_WHEN_dispense_a_new_ticket_THEN_turn_number_of_the_new_ticket_is_greater()
         {
             TicketDispenser tickDispenser = new TicketDispenser();
-            TurnTicket ticket = tickDispenser.GetTurnTicket();
-            ticket = tickDispenser.GetTurnTicket();
-            ticket = tickDispenser.GetTurnTicket();
-            Assert.AreEqual(2, ticket.TurnNumber);
+            TurnTicket oldTicket = tickDispenser.GetTurnTicket();
+            TurnTicket newTicket = tickDispenser.GetTurnTicket();
+            Assert.Greater(newTicket.TurnNumber, oldTicket.TurnNumber);
         }
     }
 }
