@@ -8,8 +8,9 @@ namespace TDDMicroExercises.TelemetrySystem.Tests
         [Test]
         public void WHEN_check_Transmision_THEN_get_characterization()
         {
+            TelemetryDiagnosticControls telementryDiagnosticControls = new TelemetryDiagnosticControls();
+            telementryDiagnosticControls.CheckTransmission();
             Assert.AreEqual("", telementryDiagnosticControls.DiagnosticInfo);
         }
-
     }
 }
