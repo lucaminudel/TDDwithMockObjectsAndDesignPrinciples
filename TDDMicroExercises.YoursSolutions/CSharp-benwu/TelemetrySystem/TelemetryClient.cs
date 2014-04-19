@@ -17,12 +17,12 @@ namespace TDDMicroExercises.TelemetrySystem
         private readonly Random _connectionEventsSimulator = new Random();
         private readonly Random _randomMessageSimulator = new Random();
 
-		public bool OnlineStatus
+		public virtual bool OnlineStatus
 		{
 			get { return _onlineStatus; }
 		}
 
-		public void Connect(string telemetryServerConnectionString)
+		public virtual void Connect(string telemetryServerConnectionString)
 		{
 			if (string.IsNullOrEmpty(telemetryServerConnectionString))
 			{
@@ -36,12 +36,12 @@ namespace TDDMicroExercises.TelemetrySystem
 
 		}
 
-		public void Disconnect()
+		public virtual void Disconnect()
 		{
 			_onlineStatus = false;
 		}
 
-		public void Send(string message)
+		public virtual void Send(string message)
 		{
 			if (string.IsNullOrEmpty(message))
 			{
@@ -60,7 +60,7 @@ namespace TDDMicroExercises.TelemetrySystem
 			}
 		}
 
-		public string Receive()
+		public virtual string Receive()
 		{
 			string message;
 
