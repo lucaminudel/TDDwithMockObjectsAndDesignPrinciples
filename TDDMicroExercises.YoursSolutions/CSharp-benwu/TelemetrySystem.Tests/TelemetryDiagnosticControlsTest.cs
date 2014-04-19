@@ -1,3 +1,4 @@
+using System;
 using Moq;
 using NUnit.Framework;
 
@@ -32,7 +33,7 @@ namespace TDDMicroExercises.TelemetrySystem.Tests
         {
             // Given
             TelemetryDiagnosticControls telemetryDiagnosticControls = 
-                new TelemetryDiagnosticControls(new TestingTelemetryClient(1, 51, 41));
+                new TelemetryDiagnosticControls(new TestingTelemetryClient(2, 51, 41));
 
             // When
             telemetryDiagnosticControls.CheckTransmission();
@@ -53,6 +54,20 @@ namespace TDDMicroExercises.TelemetrySystem.Tests
                 + "Local Rtrn Count............ 00\r\n"
                 + "Remote Rtrn Count........... 00";
             Assert.AreEqual(message, telemetryDiagnosticControls.DiagnosticInfo);
+        }
+
+        [Test]
+        public void GIVEN_not_online_to_server_WHEN_check_transmission_THEN_get_exception()
+        {
+            // Given
+            TelemetryDiagnosticControls telemetryDiagnosticControls =
+                new TelemetryDiagnosticControls(new TestingTelemetryClient(3, 51, 41));
+
+            // When
+            var exception = Assert.Throws<Exception>(() => telemetryDiagnosticControls.CheckTransmission());
+
+            // Then
+            Assert.That(exception.Message, Is.EqualTo("Unable to connect."));
         }
     }
 }
