@@ -65,7 +65,12 @@ namespace TDDMicroExercises.TelemetrySystem
 			}
 		}
 
-		public virtual string Receive()
+	    public virtual string Receive()
+	    {
+            this.Receive(_randomMessageSimulator.Next(50, 110), _randomMessageSimulator.Next(40, 126));
+	    }
+
+	    public virtual string Receive(int messageRandomNumberFrom50To110, int messageRandomNumberFrom40To126)
 		{
 			string message;
 
@@ -93,10 +98,10 @@ namespace TDDMicroExercises.TelemetrySystem
 			{                
 				// Simulate the reception of a response message returning a random message.
 				message = string.Empty;
-                int messageLength = _randomMessageSimulator.Next(50, 110);
+                int messageLength = messageRandomNumberFrom50To110;
 				for(int i = messageLength; i > 0; --i)
 				{
-                    message += (char)_randomMessageSimulator.Next(40, 126);
+                    message += (char)messageRandomNumberFrom40To126;
 				}
 			}
 
