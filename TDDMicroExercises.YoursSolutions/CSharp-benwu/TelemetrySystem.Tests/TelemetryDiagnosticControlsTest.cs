@@ -21,6 +21,7 @@ namespace TDDMicroExercises.TelemetrySystem.Tests
 
             // Then
             telemetryClient.Verify(t => t.Disconnect());
+            // telemetryClient.Verify(t => t.Connect("*111#")); // Why this line never performed?
             telemetryClient.Verify(t => t.Send("AT#UD"));
             telemetryClient.Verify(t => t.Receive());
         }
