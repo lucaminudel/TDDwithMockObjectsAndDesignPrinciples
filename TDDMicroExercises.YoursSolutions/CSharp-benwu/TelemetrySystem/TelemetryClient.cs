@@ -22,15 +22,20 @@ namespace TDDMicroExercises.TelemetrySystem
 			get { return _onlineStatus; }
 		}
 
-		public virtual void Connect(string telemetryServerConnectionString)
-		{
-			if (string.IsNullOrEmpty(telemetryServerConnectionString))
+	    public virtual void Connect(string telemetryServerConnectionString)
+	    {
+            this.Connect(telemetryServerConnectionString, _connectionEventsSimulator.Next(1, 10));
+	    }
+
+	    public virtual void Connect(string telemetryServerConnectionString, int connectionEventsRandomNumberFrom1To10)
+        {
+            if (string.IsNullOrEmpty(telemetryServerConnectionString))
 			{
 				throw new ArgumentNullException();
 			}
 
 			// Fake the connection with 20% chances of success
-			bool success = _connectionEventsSimulator.Next(1, 10) <= 2;
+			bool success = connectionEventsRandomNumberFrom1To10 <= 2;
 
 			_onlineStatus = success;
 
