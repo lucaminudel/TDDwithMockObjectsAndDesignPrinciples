@@ -32,7 +32,7 @@ namespace TDDMicroExercises.TelemetrySystem.Tests
         {
             // Given
             TelemetryDiagnosticControls telemetryDiagnosticControls = 
-                new TelemetryDiagnosticControls(new TestingTelemetryClient());
+                new TelemetryDiagnosticControls(new TestingTelemetryClient(1, 51, 41));
 
             // When
             telemetryDiagnosticControls.CheckTransmission();
