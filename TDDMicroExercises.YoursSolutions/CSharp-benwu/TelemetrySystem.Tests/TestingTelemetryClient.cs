@@ -12,5 +12,15 @@ namespace TDDMicroExercises.TelemetrySystem.Tests
             this._messageRandomNumberFrom50To110 = messageRandomNumberFrom50To110;
             this._messageRandomNumberFrom40To126 = messageRandomNumberFrom40To126;
         }
+
+        public override void Connect(string telemetryServerConnectionString)
+        {
+            this.Connect(telemetryServerConnectionString, _connectionEventsRandomNumberFrom1To10);
+        }
+
+        public override string Receive()
+        {
+            return this.Receive(_messageRandomNumberFrom50To110, _messageRandomNumberFrom40To126);
+        }
     }
 }

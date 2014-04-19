@@ -67,7 +67,7 @@ namespace TDDMicroExercises.TelemetrySystem
 
 	    public virtual string Receive()
 	    {
-            this.Receive(_randomMessageSimulator.Next(50, 110), _randomMessageSimulator.Next(40, 126));
+            return this.Receive(_randomMessageSimulator.Next(50, 110), _randomMessageSimulator.Next(40, 126));
 	    }
 
 	    public virtual string Receive(int messageRandomNumberFrom50To110, int messageRandomNumberFrom40To126)
