@@ -11,7 +11,8 @@ namespace TDDMicroExercises.TelemetrySystem.Tests
         {
             // Given
             var telemetryClient = new Mock<TelemetryClient>();
-            TelemetryDiagnosticControls telementryDiagnosticControls = new TelemetryDiagnosticControls(telemetryClient.Object);
+            TelemetryDiagnosticControls telementryDiagnosticControls = 
+                new TelemetryDiagnosticControls(telemetryClient.Object);
             telemetryClient
                 .Setup(t => t.OnlineStatus)
                 .Returns(true);
@@ -24,6 +25,20 @@ namespace TDDMicroExercises.TelemetrySystem.Tests
             // telemetryClient.Verify(t => t.Connect("*111#")); // Why this line never performed?
             telemetryClient.Verify(t => t.Send("AT#UD"));
             telemetryClient.Verify(t => t.Receive());
+        }
+
+        [Test]
+        public void GIVEN_on_happy_path_WHEN_check_transmission_THEN_get_characterization()
+        {
+            // Given
+            TelemetryDiagnosticControls telemetryDiagnosticControls = 
+                new TelemetryDiagnosticControls(new TestingTelemetryClient());
+
+            // When
+            telemetryDiagnosticControls.CheckTransmission();
+
+            // Then
+            Assert.AreEqual("", telemetryDiagnosticControls.DiagnosticInfo);
         }
     }
 }
