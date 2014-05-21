@@ -1,5 +1,7 @@
 <?php
 
+include "Sensor.php"
+
 namespace TDDMicroExercises\PHP\TirePressureMonitoringSystem;
 
 class Alarm
