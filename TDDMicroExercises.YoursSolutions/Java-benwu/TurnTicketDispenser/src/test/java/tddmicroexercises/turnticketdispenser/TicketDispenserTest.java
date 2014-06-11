@@ -19,7 +19,6 @@ public class TicketDispenserTest {
         assertTrue(newTicket.getTurnNumber() > previousTicket.getTurnNumber());
     }
 
-    // TODO-acceptance-test: a new ticket should have the turn number subsequent to the previous ticket from another dispenser
     @Test
     public void a_new_ticket_should_have_the_turn_number_subsequent_to_the_previous_ticket_from_another_dispenser() {
         // Arrange
@@ -34,6 +33,19 @@ public class TicketDispenserTest {
         assertTrue(newTicketFromAnotherDispenser.getTurnNumber() > previousTicket.getTurnNumber());
     }
 
-    // TODO-acceptance-test: after ticket 10 come ticket 11
+    // TODO-acceptance-test-working-on: after ticket 10 come ticket 11
+    @Test
+    public void after_ticket_10_come_ticket_11() {
+        // Arrange
+        TestingTurnNumberSequence testingTurnNumberSequence = new TestingTurnNumberSequence();
+        testingTurnNumberSequence.setCurrentTurnNumber(10);
+        TicketDispenser ticketDispenser = new TicketDispenser(testingTurnNumberSequence);
+
+        // Act
+        TurnTicket newTicket = ticketDispenser.getTurnTicket();
+
+        // Assert
+        assertEquals(11, newTicket.getTurnNumber());
+    }
 
 }
