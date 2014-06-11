@@ -2,6 +2,12 @@ package tddmicroexercises.turnticketdispenser;
 
 public class TicketDispenser
 {
+    private TurnNumberSequence turnNumberSequence;
+
+    public TicketDispenser(TurnNumberSequence turnNumberSequence) {
+        this.turnNumberSequence = turnNumberSequence;
+    }
+
     public TurnTicket getTurnTicket()
     {
         // TODO: Depending on a static method violates the Dependency Inversion Principle and Open-Closed Principle.
