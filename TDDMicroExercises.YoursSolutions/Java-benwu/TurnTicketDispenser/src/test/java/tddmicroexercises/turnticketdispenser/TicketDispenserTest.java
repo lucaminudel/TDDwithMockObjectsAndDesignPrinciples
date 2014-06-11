@@ -33,7 +33,6 @@ public class TicketDispenserTest {
         assertTrue(newTicketFromAnotherDispenser.getTurnNumber() > previousTicket.getTurnNumber());
     }
 
-    // TODO-acceptance-test-working-on: after ticket 10 come ticket 11
     @Test
     public void after_ticket_10_come_ticket_11() {
         // Arrange
