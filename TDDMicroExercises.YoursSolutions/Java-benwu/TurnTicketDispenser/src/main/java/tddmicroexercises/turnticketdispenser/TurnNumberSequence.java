@@ -6,6 +6,6 @@ public class TurnNumberSequence
 
     public static int getNextTurnNumber()
     {
-        return turnNumber++;
+        return ++turnNumber;
     }
 }
