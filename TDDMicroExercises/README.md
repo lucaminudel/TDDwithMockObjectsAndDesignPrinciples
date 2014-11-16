@@ -3,9 +3,9 @@
 ## Facilitator Instructions and Coding-Dojo Agenda
 
 
-- Provide attendees with [Quick Start instructions](https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/blob/master/Slides/Quick%20Start.pdf?raw=true) to setup the IDE and load the first exercise; for public events consider sending in advance the code via email or providing Usb keys 
+- Provide attendees with [Quick Start instructions](https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/blob/master/Slides/Quick%20Start.pdf?raw=true) to setup the IDE and load the first exercise ([here in Italian](https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/blob/master/Slides/Quick%20Start%20ITA.pdf?raw=true)); for public events consider sending in advance the code via email or providing Usb keys 
 
-- List the languages supported and help the attendees to organize in pairs based on they favorite language and ensuring that attendees less familiar with the language, the IDE or the test framework will pair with someone more experienced
+- List the languages supported and help the attendees to organize in pairs based on they favorite language and balancing the level of expertise
 
 - Check that all pairs have successfully loaded the 1st exercise and succeeded to write and run a first sanity check or empty unit test. Provide help where required.
 
@@ -19,9 +19,9 @@
 
 - Show the proposed solution and discuss the design improvements and the refactoring steps
 
-- Present the instructions for the following exercise and repeat as before; do it for all the exercises you want to cover during the dojo
+- Present the instructions for the following exercise and repeat the same steps as before; do it for all the exercises you want to cover during the dojo
 
-- Discuss with the group general approaches to start unit testing and refactoring legacy code-bases
+- Discuss with the group general approaches to start with unit testing and refactoring with legacy code-bases
 
 - Present and discuss with the group the slide about the relation between TDD and good design
 
