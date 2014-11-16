@@ -95,4 +95,4 @@ Thank you all !
 
 ## Help with the porting
 
-If you want to complete the porting of the remaining exercises in C++ and Scala, add more languages or double-check that latest porting are up to date with the original: start looking at the original C# version for strong-type languages and at the JavaScript version for dynamic languages.
+If you want to complete the porting of the remaining exercises in C++ and Scala, add more languages or double-check that latest porting are up to date with the original (the C# version for strong-type languages and at the JavaScript version for dynamic languages) you are very welcome.
