@@ -1,8 +1,40 @@
-# Refactoring legacy code driven by tests - Kata
+# Refactoring legacy code driven by tests - Coding Dojo
 
-In this repository you'll find source code for four distinct coding challenges in Java, C#, Ruby, JavaScript and Python. You also find the [slides with the instructions] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/blob/master/Slides/Refactoring-legacy-code-driven-by-tests-full.pdf?raw=true) you can use in a coding dojo.
+## Facilitator Instructions and Coding-Dojo Agenda
 
-## Instructions
+
+- Provide attendees with [Quick Start instructions](https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/blob/master/Slides/Quick%20Start.pdf?raw=true) to setup the IDE and load the first exercise; for public events consider sending in advance the code via email or providing Usb keys 
+
+- List the languages supported and help the attendees to organize in pairs based on they favorite language and ensuring that attendees less familiar with the language, the IDE or the test framework will pair with someone more experienced
+
+- Check that all pairs have successfully loaded the 1st exercise and succeeded to write and run a first sanity check or empty unit test. Provide help where required.
+
+- Introduce the scope of the coding-dojo and provide basic guidelines about pair-programming and iterative gradual approach to refactoring and unit test writing.
+
+- Present the instructions for the 1st exercise ([here are the slides](https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/blob/master/Slides/Refactoring-legacy-code-driven-by-tests-full.pdf?raw=true))
+
+- Now it’s coding time, for at least 30 minutes
+
+- Let attendees present their solutions and facilitate group discussions ([here are comments about the exercises for the facilitator](https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/blob/master/TDDMicroExercises.ProposedSolution/General%20comments.rtf))
+
+- Show the proposed solution and discuss the design improvements and the refactoring steps
+
+- Present the instructions for the following exercise and repeat as before; do it for all the exercises you want to cover during the dojo
+
+- Discuss with the group general approaches to start unit testing and refactoring legacy code-bases
+
+- Present and discuss with the group the slide about the relation between TDD and good design
+
+- Ask for final comments, thanks attendees and end the coding-dojo.
+
+#### Timing
+
+You can count about 90 minutes per exercise: you can organize a 90 minutes dojo with just one exercise, a 90+90 minutes dojo with 2 exercises or a whole day coding dojo with 2 exercises in the morning (90+90 minutes) and 2 exercises in the afternoon (90+90 minutes).
+The time required for the opening and the closing of the dojo is almost always the same, so for a 1-exercise version of the coding-dojo you could have to run a little faster.
+
+
+
+## Develpers’ Instructions
 
 This could be code you just inherited from a legacy code-base. Now you want to write unit tests for it, and that is harder than it needs to be.
 
@@ -46,7 +78,7 @@ Share your solutions [here] (https://github.com/lucaminudel/TDDwithMockObjectsAn
 
 ## Credits
 
-Thanks to [Emily Bache] (https://github.com/emilybache) for the Python version of the exercises and for including this kata in [The Coding Dojo Handbook] (https://leanpub.com/codingdojohandbook) by Emily Bache with foreword by Robert C. Martin.
+Thanks to [Emily Bache] (https://github.com/emilybache) for the Python version of the exercises, for the Scala and C++ versions of some of the exercises, and for including this kata in [The Coding Dojo Handbook] (https://leanpub.com/codingdojohandbook) by Emily Bache with foreword by Robert C. Martin.
 Thanks to [Peter Rhys Thomas] (https://github.com/peterrhysthomas) for theporting to Java.
 Thanks to [Sam Serpoosh] (https://github.com/Sam-Serpoosh) for the porting to Ruby.
 Thanks to [Arthur Almeida] (https://github.com/arthuralmeidap) for the porting to PHP. 
