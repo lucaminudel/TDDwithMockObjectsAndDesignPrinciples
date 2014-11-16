@@ -86,10 +86,13 @@ Share your solutions [here] (https://github.com/lucaminudel/TDDwithMockObjectsAn
 
 ## Credits
 
-Thanks to [Emily Bache] (https://github.com/emilybache) for the Python version of the exercises, for the Scala and C++ versions of some of the exercises.
+Thanks to [Emily Bache] (https://github.com/emilybache) for the Python version of the exercises, for the Scala and C++ versions of the exercises.
 Thanks to [Peter Rhys Thomas] (https://github.com/peterrhysthomas) for the porting to Java.
 Thanks to [Sam Serpoosh] (https://github.com/Sam-Serpoosh) for the porting to Ruby.
 Thanks to [Arthur Almeida] (https://github.com/arthuralmeidap) for the porting to PHP. 
 Thank you all !
 
-If you want to complete the porting of the remaining exercises in C++ and Scala, add more languages or double-check the current porting: start looking at the original C# version for strong-type languages and at the JavaScript version for dynamic languages.
+
+## Help with the porting
+
+If you want to complete the porting of the remaining exercises in C++ and Scala, add more languages or double-check that latest porting are up to date with the original: start looking at the original C# version for strong-type languages and at the JavaScript version for dynamic languages.
