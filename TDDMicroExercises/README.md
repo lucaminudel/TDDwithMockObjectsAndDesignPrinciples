@@ -5,11 +5,11 @@
 
 - Provide attendees with [Quick Start instructions](https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/blob/master/Slides/Quick%20Start.pdf?raw=true) to setup the IDE and load the first exercise ([here in Italian](https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/blob/master/Slides/Quick%20Start%20ITA.pdf?raw=true)); for public events consider sending in advance the code via email or providing Usb keys 
 
-- List the languages supported and help the attendees to organize in pairs based on they favorite language and balancing the level of expertise
+- List the languages supported and help the attendees to organize in pairs based on they favorite language and balancing their level of expertise
 
 - Check that all pairs have successfully loaded the 1st exercise and succeeded to write and run a first sanity check or empty unit test. Provide help where required.
 
-- Introduce the scope of the coding-dojo and provide basic guidelines about pair-programming and iterative gradual approach to refactoring and unit test writing.
+- Introduce the scope of the coding-dojo and provide basic guidelines about pair-programming and iterative gradual approach to refactoring and unit-tests writing.
 
 - Present the instructions for the 1st exercise ([here are the slides](https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/blob/master/Slides/Refactoring-legacy-code-driven-by-tests-full.pdf?raw=true))
 
@@ -30,11 +30,16 @@
 #### Timing
 
 You can count about 90 minutes per exercise: you can organize a 90 minutes dojo with just one exercise, a 90+90 minutes dojo with 2 exercises or a whole day coding dojo with 2 exercises in the morning (90+90 minutes) and 2 exercises in the afternoon (90+90 minutes).
-The time required for the opening and the closing of the dojo is almost always the same, so for a 1-exercise version of the coding-dojo you could have to run a little faster.
+
+The time required for the opening and the closing of the dojo is almost always the same. The more exercises (90 minutes sessions) you include in the dojo, the more time is available for attendees to show and discuss their solutions, for general questions and for discussing more advanced topics.
+
+Consider one facilitator per 10 attendees. Pair facilitators can help 20 attendees. 
+Consider that the larger the number of attendees is, the less air-time is available to every attendee to show the solution, to discuss and to ask questions.
+
+Have fun!!! And share your experiences and your learnings.
 
 
-
-## Develpers’ Instructions
+## Developers’ Instructions
 
 This could be code you just inherited from a legacy code-base. Now you want to write unit tests for it, and that is harder than it needs to be.
 
