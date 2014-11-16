@@ -7,15 +7,15 @@
 
 - List the languages supported and help the attendees to organize in pairs based on they favorite language and balancing their level of expertise
 
-- Check that all pairs have successfully loaded the 1st exercise and succeeded to write and run a first sanity check or empty unit test. Provide help where required.
+- Check that all pairs have successfully loaded the 1st exercise and wrote and ran the first empty unit-test. Provide help where required.
 
-- Introduce the scope of the coding-dojo and provide basic guidelines about pair-programming and iterative gradual approach to refactoring and unit-tests writing.
+- Introduce the scope of the coding-dojo and provide basic guidelines about pair-programming and about iterative gradual approach to refactoring and unit-testing.
 
-- Present the instructions for the 1st exercise ([here are the slides](https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/blob/master/Slides/Refactoring-legacy-code-driven-by-tests-full.pdf?raw=true))
+- Present the instructions for the 1st exercise ([here the slides](https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/blob/master/Slides/Refactoring-legacy-code-driven-by-tests-full.pdf?raw=true))
 
-- Now it’s coding time, for at least 30 minutes
+- Now it’s coding time, for 40 minutes max. Provide support and help attendees when asked.
 
-- Let attendees present their solutions and facilitate group discussions ([here are comments about the exercises for the facilitator](https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/blob/master/TDDMicroExercises.ProposedSolution/General%20comments.rtf))
+- Let attendees present their solutions and facilitate group discussions ([downlonad here the comments about the exercises for the facilitator](https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/blob/master/TDDMicroExercises.ProposedSolution/General%20comments.rtf))
 
 - Show the proposed solution and discuss the design improvements and the refactoring steps
 
@@ -26,6 +26,9 @@
 - Present and discuss with the group the slide about the relation between TDD and good design
 
 - Ask for final comments, thanks attendees and end the coding-dojo.
+
+You can find more instructions in the [The Coding Dojo Handbook] (https://leanpub.com/codingdojohandbook) by Emily Bache with foreword by Robert C. Martin.
+
 
 #### Timing
 
@@ -83,10 +86,10 @@ Share your solutions [here] (https://github.com/lucaminudel/TDDwithMockObjectsAn
 
 ## Credits
 
-Thanks to [Emily Bache] (https://github.com/emilybache) for the Python version of the exercises, for the Scala and C++ versions of some of the exercises, and for including this kata in [The Coding Dojo Handbook] (https://leanpub.com/codingdojohandbook) by Emily Bache with foreword by Robert C. Martin.
-Thanks to [Peter Rhys Thomas] (https://github.com/peterrhysthomas) for theporting to Java.
+Thanks to [Emily Bache] (https://github.com/emilybache) for the Python version of the exercises, for the Scala and C++ versions of some of the exercises.
+Thanks to [Peter Rhys Thomas] (https://github.com/peterrhysthomas) for the porting to Java.
 Thanks to [Sam Serpoosh] (https://github.com/Sam-Serpoosh) for the porting to Ruby.
 Thanks to [Arthur Almeida] (https://github.com/arthuralmeidap) for the porting to PHP. 
 Thank you all !
 
-If you want to contribute to the porting of the exercises and of the proposed solutions, start looking at the original C# version for strong-type languages and at the JavaScript version for dynamic languages.
+If you want to complete the porting of the remaining exercises in C++ and Scala, add more languages or double-check the current porting: start looking at the original C# version for strong-type languages and at the JavaScript version for dynamic languages.
