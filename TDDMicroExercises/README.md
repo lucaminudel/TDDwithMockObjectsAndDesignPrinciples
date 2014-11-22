@@ -11,7 +11,7 @@
 
 - Introduce the scope of the coding-dojo and provide basic guidelines about pair-programming and about iterative gradual approach to refactoring and unit-testing.
 
-- Present the instructions for the 1st exercise ([here the slides](https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/blob/master/Slides/Refactoring-legacy-code-driven-by-tests-full.pdf?raw=true))
+- Present the instructions for the 1st exercise [with help from the slides](http://www.slideshare.net/LucaMinudel/refactoring-legacy-code-driven-by-tests-eng) [even in italian](http://www.slideshare.net/LucaMinudel/refactoring-legacy-code-driven-by-tests-ita)
 
 - Now it’s coding time, for 40 minutes max. Provide support and help attendees when asked.
 
