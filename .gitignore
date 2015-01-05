@@ -5,3 +5,10 @@ _ReSharper*/
 *.user
 .DS_Store
 *.pyc
+
+#Doc
+*.rtf#
+
+# IDEA
+.idea/
+*.iml
