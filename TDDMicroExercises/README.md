@@ -1,4 +1,4 @@
-# Refactoring legacy code driven by tests - Coding Dojo
+﻿# Refactoring legacy code driven by tests - Coding Dojo
 
 ## Facilitator Instructions and Coding-Dojo Agenda
 
@@ -15,7 +15,7 @@
 
 - Now it’s coding time, for 40 minutes max. Provide support and help attendees when asked.
 
-- Let attendees present their solutions and facilitate group discussions ([downlonad here the comments about the exercises for the facilitator](../TDDMicroExercises.ProposedSolution/General%20comments.rtf))
+- Let attendees present their solutions and facilitate group discussions ([downlonad here the comments about the exercises for the facilitator](../TDDMicroExercises.ProposedSolution/General%20comments.rtf?raw=true))
 
 - Show the proposed solution and discuss the design improvements and the refactoring steps
 
