@@ -3,13 +3,21 @@
   <groupId>TelemetrySystem</groupId>
   <artifactId>TelemetrySystem</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+
   <dependencies>
-  <dependency>
-  		<groupId>junit</groupId>
-  		<artifactId>junit</artifactId>
-  		<version>4.9</version>
-  		<type>jar</type>
-  		<scope>test</scope>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
   	</dependency>
   </dependencies>
+
+  <properties>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
+
 </project>
