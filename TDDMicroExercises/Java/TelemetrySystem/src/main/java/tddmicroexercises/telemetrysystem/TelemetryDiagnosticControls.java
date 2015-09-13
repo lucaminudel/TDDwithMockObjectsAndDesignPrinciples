@@ -2,8 +2,8 @@ package tddmicroexercises.telemetrysystem;
 
 public class TelemetryDiagnosticControls
 {
-    private final static String DIAGNOSTIC_CHANNEL_CONNECTION_STRING = "*111#";
-    
+    private static final String DIAGNOSTIC_CHANNEL_CONNECTION_STRING = "*111#";
+
     private final TelemetryClient telemetryClient;
     private String diagnosticInfo = "";
 
@@ -29,13 +29,13 @@ public class TelemetryDiagnosticControls
         telemetryClient.disconnect();
 
         int retryLeft = 3;
-        while (telemetryClient.getOnlineStatus() == false && retryLeft > 0)
+        while (!telemetryClient.getOnlineStatus() && retryLeft > 0)
         {
             telemetryClient.connect(DIAGNOSTIC_CHANNEL_CONNECTION_STRING);
             retryLeft -= 1;
         }
 
-        if(telemetryClient.getOnlineStatus() == false)
+        if (!telemetryClient.getOnlineStatus())
         {
             throw new Exception("Unable to connect.");
         }
