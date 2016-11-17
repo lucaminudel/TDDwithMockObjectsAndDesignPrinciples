@@ -1,0 +1,124 @@
+Refactoring de code hérité conduit par les tests - Coding Dojo
+==============================================================
+
+Instructions du facilitateur et programme de coding dojo  
+--------------------------------------------------------
+
+* Fournir aux participants des instructions de démarrage rapide pour configurer 
+l'IDE et charger le premier exercice (ici en français). Pour les événements publics envisager d'envoyer à l'avance le code par courrier électronique ou de fournir des clés USB.
+
+* Énumérez les langages pris en charge et aidez les participants à s'organiser 
+par paires selon leur langage préféré et à équilibrer leur niveau 
+d'expertise  
+
+* Vérifiez que toutes les paires ont correctement chargé le 1er exercice et écrit et exécuté le premier test unitaire vide. Fournir l'aide nécessaire.  
+
+* Introduire la portée du dojo de codage et fournir des directives de base sur la 
+programmation par paires et sur l'approche progressive itérative au refactoring et au test unitaire.
+
+* Présentez les instructions pour le 1er exercice http://www.slideshare.net/LucaMinudel/refactoring-legacy-code-driven-by-tests-eng[avec l'aide des diapositives], même en français  
+
+* Maintenant, c'est le temps de codage, pour 40 minutes max. Fournir un soutien et aider les participants quand on leur demande.  
+
+* Laissez les participants présenter leurs solutions et facilitez les 
+discussions de groupe (https://github.com/Riduidel/TDDwithMockObjectsAndDesignPrinciples/blob/master/TDDMicroExercises.ProposedSolution/General%20comments.rtf?raw=true[téléchargez ici les commentaires sur les exercices pour le facilitateur])  
+
+* Montrez la solution proposée et discuter des améliorations de conception et des étapes de refactoring  
+
+* Présenter les instructions pour l'exercice suivant et répéter les mêmes étapes que précédemment; Faites-le pour tous les exercices que vous voulez couvrir pendant le dojo  
+
+* Discutez avec le groupe des approches générales pour commencer avec le test 
+unitaire et le refactoring avec des bases de code héritées  
+
+* Présenter et discuter avec le groupe la diapositive sur la relation entre le TDD et le bon design  
+
+* Demandez des commentaires finaux, remerciez les participants et mettez fin au codage-dojo.
+
+Vous trouverez plus d'instructions dans https://leanpub.com/codingdojohandbook[The Coding Dojo Handbook] de Emily Bache avec l'avant-propos de Robert C. Martin.  
+
+== Timing  
+
+Vous  pouvez compter environ 90 minutes par exercice: vous pouvez organiser 
+un dojo de 90 minutes avec un seul exercice, un dojo de 90 + 90 minutes 
+avec 2 exercices ou un dojo de codage d'une journée entière avec 2 
+exercices le matin (90 + 90 minutes) et 2 Exercices l'après-midi (90 + 90 minutes).  
+
+Le temps nécessaire pour l'ouverture et la fermeture du dojo est presque toujours le même. Plus
+ les exercices (sessions de 90 minutes) que vous incluez dans le dojo, 
+plus le temps est disponible pour les participants de montrer et de 
+discuter leurs solutions, pour des questions générales et pour discuter 
+de sujets plus avancés.  
+
+Considérez un facilitateur pour 10 participants. Les animateurs peuvent aider 20 participants. Considérez que plus le nombre de participants est élevé, moins le temps d'antenne 
+est disponible pour chaque participant pour montrer la solution, 
+discuter et poser des questions.  
+
+Amusez-vous !!! Et partagez vos expériences et vos apprentissages.
+
+== Instructions pour les développeurs  
+
+Cela pourrait être le code que vous venez d'hériter d'un collègue. Maintenant, vous voulez écrire des tests unitaires pour elle, et c'est plus difficile que ça ne devrait.
+
+Pour chaque exercice, il n'ya qu'une seule classe pour laquelle vous avez intérêt à écrire des tests pour le moment. Dans un premier temps, essayez d'écrire un test avant de changer la classe. Identifier pourquoi il est difficile d'écrire des tests pour la classe, et quels principes SOLID ne sont pas suivis.  
+
+Lorsque vous avez un test sur lequel vous appuyer, refactoriser le code et rendez-le testable. Soyez prudent lors des refactoring pour ne pas modifier la fonctionnalité, ou 
+de modifier les interfaces sur lesquelles d'autres codes client peut 
+compter. Ajoutez plus de tests pour couvrir les fonctionnalités de la classe particulière que vous avez été commencé à tester.  
+
+Utilisez le style de test unitaire et le framework avec lequel vous êtes le plus à l'aise. Vous pouvez choisir d'utiliser des stubs ou des mocks ou pas du tout. Si vous le faites, vous êtes libre d'utiliser l'outil de mock que vous préférez.
+
+=== TirePressureMonitoringSystem
+
+Ecrire les tests unitaires pour la classe d'alarme, refactoriser le 
+code autant que vous avez besoin pour rendre la classe testable.  
+
+La classe d'alarme est conçue pour surveiller la pression des pneus et 
+déclencher une alarme si la pression sort de la plage prévue. La classe de capteurs fournie pour l'exercice simule le comportement d'un capteur de pneu réel, fournissant des valeurs aléatoires mais réalistes.  
+
+=== UnicodeFileToHtmTextConverter
+
+Écrivez les tests unitaires pour la classe UnicodeFileToHtmTextConverter, refactorisez le code autant que vous avez besoin pour rendre la classe testable.  
+
+La classe UnicodeFileToHtmTextConverter est conçue pour reformater un fichier texte brut à afficher dans un navigateur.  
+
+=== Exercice TicketDispenser:  
+
+Écrivez les tests unitaires pour le TicketDispenser, refactorisez le 
+code autant que vous avez besoin pour rendre la classe testable.  
+
+La classe TicketDispenser est conçue pour être utilisée pour gérer un système de files d'attente dans un magasin. Il peut y avoir plus d'un distributeur de billets, mais le même billet ne devrait pas être délivré à deux clients différents.  
+
+=== Exercice sur le système de télémétrie:  
+
+Écrivez les tests unitaires pour la classe 
+TelemetryDiagnosticControls, refactorisez le code autant que vous avez 
+besoin pour rendre la classe testable.  
+
+La responsabilité de la classe TelemetryDiagnosticControls est d'établir 
+une connexion au serveur de télémétrie (via TelemetryClient), d'envoyer 
+une requête de diagnostic et de recevoir avec succès la réponse 
+contenant les informations de diagnostic. La
+ classe TelemetryClient fournie pour l'exercice simule le comportement 
+de la classe TelemetryClient réelle et peut répondre avec l'information 
+de diagnostic ou une séquence aléatoire. La vraie classe TelemetryClient se connecte et communique avec le serveur de télémétrie via tcp / ip.
+
+== Une solution possible  
+
+Ici
+ vous trouvez une des solutions possibles pour l'exercice et un 
+commentaire général pour évaluer vos solutions: solutions possibles.  
+
+== Partagez vos solutions  
+
+https://github.com/Riduidel/TDDwithMockObjectsAndDesignPrinciples/blob/master/TDDMicroExercises.YoursSolutions#readme[Partagez vos solutions ici].  
+
+== Crédits  
+
+Merci à Emily Bache pour la version Python des exercices, pour les versions Scala et C ++ des exercices. Merci à Peter Rhys Thomas pour le portage vers Java. Merci à Sam Serpoosh pour le portage à Ruby. Merci à Arthur Almeida pour le portage vers PHP. Merci à tous !  
+
+=== Aide pour le portage  
+
+Si vous souhaitez compléter le portage des exercices restants en C ++ et 
+Scala, ajoutez d'autres langues ou vérifiez que les dernières versions 
+sont à jour avec l'original (la version C # pour les langages de type 
+fort et la version JavaScript pour les langages dynamiques ) vous êtes le bienvenu.

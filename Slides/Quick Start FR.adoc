@@ -1,0 +1,13 @@
+Démarrage rapide
+================
+
+1. Choisissez votre IDE favori, votre framework de test unitaire et le langage entre Java, C #, C ++, JavaScript, Python, Ruby et Scala  
+Conseil: Vous ne voulez pas qu'un langage ou IDE inconnu vous ralentissez pendant ce défi avec un temps disponible très limité.  
+2. Copiez le premier exercice de la clé USB sur votre ordinateur portable.  
+3. Lancez votre IDE, chargez le code du premier exercice, vérifiez qu'il compile sans erreurs. Pour JavaScript, Python, Ruby et Scala: vous pouvez exécuter le test unitiare
+ de base inclus dans le code pour vérifier que le code s'exécute sans 
+erreurs de syntaxe. Ou vous pouvez simplement supprimer le test.  
+4. Écrivez un test d'unité vide et exécutez-le pour vérifier que votre framework de test d'unité favori fonctionne très bien.  
+5. Vous êtes prêt à commencer maintenant! Mais d'abord recherchez votre camarade de binôme avec: crier le langage que vous avez choisi et inviteé quelqu'un avec la même préférence
+ 6. Écoutez les présentateurs maintenant, ils vous expliqueront le but 
+de l'exercice. Il vous reste 30 minutes pour réussir le défi !!!
