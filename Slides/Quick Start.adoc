@@ -1,0 +1,9 @@
+Quick Start
+===========
+
+1. Chose your favourite IDE, Unit Test framework and language among Java, C#, C++, JavaScript, Python, Ruby and Scala 
+Tip: You don’t want an unfamiliar language or IDE to slow you down during this challenge with very limited available time. 
+2. Copy the 1st exercise from the USB to your laptop.
+3. Fire up your IDE, load the code of the first exercise, check that it compiles without errors. For JavaScript, Python, Ruby and Scala: you can run the basic unit test included in the code to check that the code run without syntax errors. Or you can just delete the test. 
+4. Write an empty unit test and run it to check that your favourite unit test framework is working just fine. 
+5. You are ready to start now!!! But first look around for someone to pair with: shout the language you have chosen and invite someone with the same preference 6. Listen to the presenters now, they will explain you the goal of the exercise. You’ll have about 30 minutes left to overcome the challenge!!!
