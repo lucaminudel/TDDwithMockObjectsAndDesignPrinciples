@@ -39,6 +39,7 @@
     <Reference Include="nunit.framework">
       <HintPath>lib\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="TelemetrySystem.Tests\MockTelemetryDataChannel.cs" />
@@ -69,6 +70,9 @@
     <Compile Include="TirePressureMonitoringSystem.SomeDependencies\AnAlarmClient1.cs" />
     <Compile Include="TirePressureMonitoringSystem.SomeDependencies\AnAlarmClient2.cs" />
     <Compile Include="TirePressureMonitoringSystem.SomeDependencies\AnAlarmClient3.cs" />
+    <Compile Include="UnicodeFileToHtmlTextConverter.SomeDependencies\aTextConverterClient1.cs" />
+    <Compile Include="UnicodeFileToHtmlTextConverter.SomeDependencies\aTextConverterClient2.cs" />
+    <Compile Include="UnicodeFileToHtmlTextConverter.SomeDependencies\aTextConverterClient3.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
