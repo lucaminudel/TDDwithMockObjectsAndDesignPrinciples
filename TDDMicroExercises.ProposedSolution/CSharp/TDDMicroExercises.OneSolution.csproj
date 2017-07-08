@@ -77,6 +77,10 @@
     <Compile Include="TurnTicketDispenser.SomeDependencies\TurnNumberSequenceClient.cs" />
     <Compile Include="TurnTicketDispenser.SomeDependencies\TurnTicketAndSequenceClient.cs" />
     <Compile Include="TurnTicketDispenser.SomeDependencies\TurnTicketClient.cs" />
+    <Compile Include="TelemetrySystem.SomeDependencies\TelemetryClientClient.cs" />
+    <Compile Include="TelemetrySystem.SomeDependencies\TelemetryDiagnosticControlsClient1.cs" />
+    <Compile Include="TelemetrySystem.SomeDependencies\TelemetryDiagnosticControlsClient2.cs" />
+    <Compile Include="TelemetrySystem.SomeDependencies\TelemetryDiagnosticControlsClient3.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
