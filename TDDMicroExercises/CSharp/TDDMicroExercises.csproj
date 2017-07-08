@@ -58,11 +58,16 @@
     <Compile Include="UnicodeFileToHtmlTextConverter.SomeDependencies\aTextConverterClient1.cs" />
     <Compile Include="UnicodeFileToHtmlTextConverter.SomeDependencies\aTextConverterClient2.cs" />
     <Compile Include="UnicodeFileToHtmlTextConverter.SomeDependencies\aTextConverterClient3.cs" />
+    <Compile Include="TurnTicketDispenser.SomeDependencies\TurnTicketClient.cs" />
+    <Compile Include="TurnTicketDispenser.SomeDependencies\TurnNumberSequenceClient.cs" />
+    <Compile Include="TurnTicketDispenser.SomeDependencies\TicketDispenserClient.cs" />
+    <Compile Include="TurnTicketDispenser.SomeDependencies\TurnTicketAndSequenceClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
     <Folder Include="TirePressureMonitoringSystem.SomeDependencies\" />
     <Folder Include="UnicodeFileToHtmlTextConverter.SomeDependencies\" />
+    <Folder Include="TurnTicketDispenser.SomeDependencies\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="lib\nunit.framework.dll" />

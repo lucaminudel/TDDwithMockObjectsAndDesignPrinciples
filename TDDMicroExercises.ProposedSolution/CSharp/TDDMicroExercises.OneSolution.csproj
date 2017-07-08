@@ -73,6 +73,10 @@
     <Compile Include="UnicodeFileToHtmlTextConverter.SomeDependencies\aTextConverterClient1.cs" />
     <Compile Include="UnicodeFileToHtmlTextConverter.SomeDependencies\aTextConverterClient2.cs" />
     <Compile Include="UnicodeFileToHtmlTextConverter.SomeDependencies\aTextConverterClient3.cs" />
+    <Compile Include="TurnTicketDispenser.SomeDependencies\TicketDispenserClient.cs" />
+    <Compile Include="TurnTicketDispenser.SomeDependencies\TurnNumberSequenceClient.cs" />
+    <Compile Include="TurnTicketDispenser.SomeDependencies\TurnTicketAndSequenceClient.cs" />
+    <Compile Include="TurnTicketDispenser.SomeDependencies\TurnTicketClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
