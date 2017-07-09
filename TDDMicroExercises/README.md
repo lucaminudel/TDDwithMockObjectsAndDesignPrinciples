@@ -27,7 +27,7 @@
 
 - Ask for final comments, thanks attendees and end the coding-dojo.
 
-You can find more instructions in the [The Coding Dojo Handbook] (https://leanpub.com/codingdojohandbook) by Emily Bache with foreword by Robert C. Martin.
+You can find more instructions in the [The Coding Dojo Handbook](https://leanpub.com/codingdojohandbook) by Emily Bache with foreword by Robert C. Martin.
 
 
 #### Timing
@@ -76,20 +76,20 @@ The responsibility of the TelemetryDiagnosticControls class is to establish a co
 
 ## A possible solution
 
-Here you find one of the possible solutions for the exercise and general comment to assess your solutions: [possible solutions.] (../TDDMicroExercises.ProposedSolution#readme)
+Here you find one of the possible solutions for the exercise and general comment to assess your solutions: [possible solutions.](../TDDMicroExercises.ProposedSolution#readme)
 
 
 ## Share your solutions
 
-Share your solutions [here] (../TDDMicroExercises.YoursSolutions#readme).
+Share your solutions [here](../TDDMicroExercises.YoursSolutions#readme).
 
 
 ## Credits
 
 Thanks to [Emily Bache] (https://github.com/emilybache) for the Python version of the exercises, for the Scala and C++ versions of the exercises.
-Thanks to [Peter Rhys Thomas] (https://github.com/peterrhysthomas) for the porting to Java.
-Thanks to [Sam Serpoosh] (https://github.com/Sam-Serpoosh) for the porting to Ruby.
-Thanks to [Arthur Almeida] (https://github.com/arthuralmeidap) for the porting to PHP.
+Thanks to [Peter Rhys Thomas](https://github.com/peterrhysthomas) for the porting to Java.
+Thanks to [Sam Serpoosh](https://github.com/Sam-Serpoosh) for the porting to Ruby.
+Thanks to [Arthur Almeida](https://github.com/arthuralmeidap) for the porting to PHP.
 Thank you all !
 
 
