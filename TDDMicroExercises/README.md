@@ -86,7 +86,7 @@ Share your solutions [here](../TDDMicroExercises.YoursSolutions#readme).
 
 ## Credits
 
-Thanks to [Emily Bache] (https://github.com/emilybache) for the Python version of the exercises, for the Scala and C++ versions of the exercises.
+Thanks to [Emily Bache](https://github.com/emilybache) for the Python version of the exercises, for the Scala and C++ versions of the exercises.
 Thanks to [Peter Rhys Thomas](https://github.com/peterrhysthomas) for the porting to Java.
 Thanks to [Sam Serpoosh](https://github.com/Sam-Serpoosh) for the porting to Ruby.
 Thanks to [Arthur Almeida](https://github.com/arthuralmeidap) for the porting to PHP.
