@@ -68,7 +68,6 @@
     <Compile Include="TelemetrySystem.SomeDependencies\TelemetryDiagnosticControlsClient3.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Properties\" />
     <Folder Include="TirePressureMonitoringSystem.SomeDependencies\" />
     <Folder Include="UnicodeFileToHtmlTextConverter.SomeDependencies\" />
     <Folder Include="TurnTicketDispenser.SomeDependencies\" />
