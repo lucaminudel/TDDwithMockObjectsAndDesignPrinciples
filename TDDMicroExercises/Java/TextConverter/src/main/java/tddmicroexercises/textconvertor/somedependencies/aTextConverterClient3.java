@@ -15,6 +15,6 @@ public class aTextConverterClient3
         Class<?> c = Class.forName("tddmicroexercises.textconvertor.UnicodeFileToHtmlTextConverter");
         Object x = c.getConstructor(String.class).newInstance(args);
 
-        String html = (String) c.getDeclaredMethod("convertToHtml").invoke(x, (Object[]) null);
+        String html = (String) c.getDeclaredMethod("convertToHtml").invoke(x);
     }
 }
