@@ -1,5 +1,6 @@
 package tddmicroexercises.telemetrysystem;
 
+import java.util.Objects;
 import java.util.Random;
 
 public class TelemetryClient
@@ -49,7 +50,7 @@ public class TelemetryClient
 
         // The simulation of Send() actually just remember if the last message sent was a diagnostic message.
         // This information will be used to simulate the Receive(). Indeed there is no real server listening.
-        if (message == DIAGNOSTIC_MESSAGE)
+        if (message.equals( DIAGNOSTIC_MESSAGE))
         {
             diagnosticMessageJustSent = true;
         } else
